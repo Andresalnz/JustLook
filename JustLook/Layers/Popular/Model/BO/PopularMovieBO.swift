@@ -24,7 +24,7 @@ struct ResultMovieBO {
     let adult: Bool?
     let backdropPath: URL?
     let genreIds: [Int]?
-    let id: Double?
+    let id: Int?
     let originalLanguaje: String?
     let originalTitle: String?
     let overview: String?

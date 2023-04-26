@@ -9,13 +9,13 @@ import Foundation
 
 struct PopularMovieDTO: Codable {
     let page: Int?
-    let result: [ResultMovieDTO]?
+    let results: [ResultMovieDTO]?
     let totalPage: Int?
     let totalResults: Int?
     
     enum CodingKeys: String, CodingKey {
         case page
-        case result
+        case results
         case totalPage = "total_pages"
         case totalResults = "total_results"
     }
@@ -25,7 +25,7 @@ struct ResultMovieDTO: Codable {
     let adult: Bool?
     let backdropPath: String?
     let genreIds: [Int]?
-    let id: Double?
+    let id: Int?
     let originalLanguaje: String?
     let originalTitle: String?
     let overview: String?

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "12235087-5483-4C09-9250-9AF9A7A07D3B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "841D7CE9-D33F-40D0-977B-7914B8194E48"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JustLook/Layers/Popular/Interactor/PopularMovieInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "getPopularMovies(url:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "841D7CE9-D33F-40D0-977B-7914B8194E48 - 4a8f244a6b40ffc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JustLook.PopularMovieInteractor.getPopularMovies() -&gt; ()"
+                  moduleName = "JustLook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andresaleu/workSpace/iOS/JustLook/JustLook/Layers/Popular/Interactor/PopularMovieInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "841D7CE9-D33F-40D0-977B-7914B8194E48 - 8ec03cb8aeb98d7d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Array&lt;JustLook.ResultMovieDTO&gt;, Alamofire.AFError&gt;) -&gt; () in JustLook.PopularMovieInteractor.getPopularMovies() -&gt; ()"
+                  moduleName = "JustLook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andresaleu/workSpace/iOS/JustLook/JustLook/Layers/Popular/Interactor/PopularMovieInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F9D893C-2A7E-4BCE-92E7-CCECE6194DA1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JustLook/Layers/Popular/Interactor/PopularMovieInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getPopularMovies(url:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3F9D893C-2A7E-4BCE-92E7-CCECE6194DA1 - e9715ab108c13be2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in JustLook.PopularMovieInteractor.getPopularMovies(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;JustLook.ResultMovieDTO&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "JustLook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andresaleu/workSpace/iOS/JustLook/JustLook/Layers/Popular/Interactor/PopularMovieInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1504">
+               </Location>
+               <Location
+                  uuid = "3F9D893C-2A7E-4BCE-92E7-CCECE6194DA1 - e9715ab108c13be2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in JustLook.PopularMovieInteractor.getPopularMovies(url: Swift.String, completion: (Swift.Result&lt;Swift.Array&lt;JustLook.ResultMovieDTO&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "JustLook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andresaleu/workSpace/iOS/JustLook/JustLook/Layers/Popular/Interactor/PopularMovieInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1544">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
