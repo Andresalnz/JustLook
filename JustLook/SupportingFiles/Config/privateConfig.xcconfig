@@ -1,0 +1,11 @@
+//
+//  debugConfig.xcconfig
+//  JustLook
+//
+//  Created by Andres Aleu on 28/4/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+API_KEY = d24265d9cbfd2e4119f0539b474f7c64
