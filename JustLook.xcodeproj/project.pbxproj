@@ -24,6 +24,8 @@
 		9F3BD7A329F84FE5009791B6 /* PopularMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3BD7A129F84FE5009791B6 /* PopularMovieViewController.xib */; };
 		9F3BD7A529F85E2D009791B6 /* PopularMovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3BD7A429F85E2D009791B6 /* PopularMovieRouter.swift */; };
 		9F69F8A029F936BF00444ED0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69F89F29F936BF00444ED0 /* Protocols.swift */; };
+		9FF4A78429FBE36A00966630 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78329FBE36A00966630 /* Constants.swift */; };
+		9FF4A78F29FC3C9E00966630 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78E29FC3C9E00966630 /* Util.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,9 @@
 		9F3BD7A129F84FE5009791B6 /* PopularMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularMovieViewController.xib; sourceTree = "<group>"; };
 		9F3BD7A429F85E2D009791B6 /* PopularMovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieRouter.swift; sourceTree = "<group>"; };
 		9F69F89F29F936BF00444ED0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		9FF4A78329FBE36A00966630 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9FF4A78D29FC3A3200966630 /* privateConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = privateConfig.xcconfig; sourceTree = "<group>"; };
+		9FF4A78E29FC3C9E00966630 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +151,7 @@
 		9F113BFC29F6CB460017101D /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				9FF4A78C29FC39F300966630 /* Config */,
 				9F113BDA29F6CAA00017101D /* Info.plist */,
 			);
 			path = SupportingFiles;
@@ -154,6 +160,8 @@
 		9F113BFD29F6CB9F0017101D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9FF4A78329FBE36A00966630 /* Constants.swift */,
+				9FF4A78E29FC3C9E00966630 /* Util.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -260,6 +268,14 @@
 				9F3BD7A129F84FE5009791B6 /* PopularMovieViewController.xib */,
 			);
 			path = ListMovies;
+			sourceTree = "<group>";
+		};
+		9FF4A78C29FC39F300966630 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9FF4A78D29FC3A3200966630 /* privateConfig.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,10 +421,12 @@
 				9F3BD79C29F7F529009791B6 /* PopularMovieInteractor.swift in Sources */,
 				9F113BD429F6CA9F0017101D /* JustLook.xcdatamodeld in Sources */,
 				9F113C0B29F6EB620017101D /* PopularMovieDTO.swift in Sources */,
+				9FF4A78F29FC3C9E00966630 /* Util.swift in Sources */,
 				9F113BCA29F6CA9F0017101D /* AppDelegate.swift in Sources */,
 				9F3BD7A529F85E2D009791B6 /* PopularMovieRouter.swift in Sources */,
 				9F113BCC29F6CA9F0017101D /* SceneDelegate.swift in Sources */,
 				9F3BD79529F7E333009791B6 /* PopularMovieMapper.swift in Sources */,
+				9FF4A78429FBE36A00966630 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +465,7 @@
 /* Begin XCBuildConfiguration section */
 		9F113BF129F6CAA00017101D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FF4A78D29FC3A3200966630 /* privateConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
