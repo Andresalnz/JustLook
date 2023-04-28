@@ -18,7 +18,7 @@ class PopularMovieViewController: UIViewController {
 }
 
 extension PopularMovieViewController: PopularMovieUI {
-    func update(moview: [ResultMovieDTO]) {
+    func update(moview: ResultMovieBO) {
         print(moview)
     }
 }

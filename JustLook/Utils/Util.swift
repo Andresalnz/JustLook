@@ -28,6 +28,7 @@ final class Util {
             let uri = Constants.TMDuri
             switch self {
             case .popularMovie:
+                //TODO: Poner lenguage y paginacion
                 return URL(string: "\(uri)movie/popular?api_key=\(String(describing: apiKey))&language=en-US&page=1")
             }
         }
