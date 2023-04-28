@@ -24,7 +24,7 @@ extension PopularMoviePresenter: PopularMoviewUIPresenter {
 
 extension PopularMoviePresenter: PopularMoviePresenterInteractor {
     func onViewAppear() {
-        popularMovieInteractor.getPopularMovies(url: "") { [weak self] data in
+        popularMovieInteractor.getPopularMovies() { [weak self] data in
             guard let wSelf = self else {return }
             switch data {
             case .success(let response):
