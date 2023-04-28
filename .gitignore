@@ -1,4 +1,5 @@
-JustLook/SupportingFiles/privateConfig.xcconfig
+
+JustLook/SupportingFiles/Config/privateConfig.xcconfig
 
 ## User settings
 xcuserdata/
