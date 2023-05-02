@@ -47,10 +47,11 @@ class PopularMovieViewController: UIViewController {
     
     
     @IBAction func btnSeriesAction(_ sender: Any) {
+        print("hola")
     }
     
     @IBAction func btnMovieAction(_ sender: Any) {
-        presenter?.onViewAppear()
+        presenter?.loadPopularMovies()
     }
 }
 

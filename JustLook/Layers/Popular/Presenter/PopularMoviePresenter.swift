@@ -19,12 +19,12 @@ final class PopularMoviePresenter {
 
 extension PopularMoviePresenter: PopularMoviewUIPresenter {
     func viewDidLoad() {
-        onViewAppear()
+        loadPopularMovies()
     }
 }
 
 extension PopularMoviePresenter: PopularMoviePresenterInteractor {
-    func onViewAppear() {
+    func loadPopularMovies() {
         popularMovieInteractor.getPopularMovies() { [weak self] data in
             guard let wSelf = self else {return }
             switch data {

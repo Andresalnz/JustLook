@@ -19,5 +19,5 @@ protocol PopularMoviewUIPresenter: AnyObject {
 
 //Protocolo para conectar Presenter con Interactor
 protocol PopularMoviePresenterInteractor: AnyObject {
-    func onViewAppear()
+    func loadPopularMovies()
 }
