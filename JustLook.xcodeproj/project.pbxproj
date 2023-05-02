@@ -23,6 +23,8 @@
 		9F3BD7A229F84FE5009791B6 /* PopularMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3BD7A029F84FE5009791B6 /* PopularMovieViewController.swift */; };
 		9F3BD7A329F84FE5009791B6 /* PopularMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3BD7A129F84FE5009791B6 /* PopularMovieViewController.xib */; };
 		9F3BD7A529F85E2D009791B6 /* PopularMovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3BD7A429F85E2D009791B6 /* PopularMovieRouter.swift */; };
+		9F3F74982A00FEBC00F136CC /* PopularMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F74962A00FEBC00F136CC /* PopularMovieCollectionViewCell.swift */; };
+		9F3F74992A00FEBC00F136CC /* PopularMovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3F74972A00FEBC00F136CC /* PopularMovieCollectionViewCell.xib */; };
 		9F69F8A029F936BF00444ED0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69F89F29F936BF00444ED0 /* Protocols.swift */; };
 		9FF4A78429FBE36A00966630 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78329FBE36A00966630 /* Constants.swift */; };
 		9FF4A78F29FC3C9E00966630 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78E29FC3C9E00966630 /* Util.swift */; };
@@ -65,6 +67,8 @@
 		9F3BD7A029F84FE5009791B6 /* PopularMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieViewController.swift; sourceTree = "<group>"; };
 		9F3BD7A129F84FE5009791B6 /* PopularMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularMovieViewController.xib; sourceTree = "<group>"; };
 		9F3BD7A429F85E2D009791B6 /* PopularMovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieRouter.swift; sourceTree = "<group>"; };
+		9F3F74962A00FEBC00F136CC /* PopularMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		9F3F74972A00FEBC00F136CC /* PopularMovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularMovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		9F69F89F29F936BF00444ED0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		9FF4A78329FBE36A00966630 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9FF4A78D29FC3A3200966630 /* privateConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = privateConfig.xcconfig; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 		9F113BFF29F6CBD10017101D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F3F74952A00FE2F00F136CC /* Cell */,
 				9F3BD79F29F84F73009791B6 /* ListMovies */,
 			);
 			path = Views;
@@ -268,6 +273,15 @@
 				9F3BD7A129F84FE5009791B6 /* PopularMovieViewController.xib */,
 			);
 			path = ListMovies;
+			sourceTree = "<group>";
+		};
+		9F3F74952A00FE2F00F136CC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9F3F74962A00FEBC00F136CC /* PopularMovieCollectionViewCell.swift */,
+				9F3F74972A00FEBC00F136CC /* PopularMovieCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		9FF4A78C29FC39F300966630 /* Config */ = {
@@ -389,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F113BD629F6CAA00017101D /* Assets.xcassets in Resources */,
+				9F3F74992A00FEBC00F136CC /* PopularMovieCollectionViewCell.xib in Resources */,
 				9F3BD7A329F84FE5009791B6 /* PopularMovieViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +438,7 @@
 				9F113C0B29F6EB620017101D /* PopularMovieDTO.swift in Sources */,
 				9FF4A78F29FC3C9E00966630 /* Util.swift in Sources */,
 				9F113BCA29F6CA9F0017101D /* AppDelegate.swift in Sources */,
+				9F3F74982A00FEBC00F136CC /* PopularMovieCollectionViewCell.swift in Sources */,
 				9F3BD7A529F85E2D009791B6 /* PopularMovieRouter.swift in Sources */,
 				9F113BCC29F6CA9F0017101D /* SceneDelegate.swift in Sources */,
 				9F3BD79529F7E333009791B6 /* PopularMovieMapper.swift in Sources */,
