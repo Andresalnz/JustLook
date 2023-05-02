@@ -9,11 +9,21 @@ import UIKit
 
 class PopularMovieViewController: UIViewController {
     
+    //MARK: - IBOutlet
+    @IBOutlet weak var collectionPopularMovies: UICollectionView!
+    
+    //MARK: - Variables
     var presenter: PopularMoviePresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
+        styles()
+    }
+    
+    //MARK: - Styles
+    func styles() {
+        self.collectionPopularMovies.backgroundColor = .black
     }
 }
 
