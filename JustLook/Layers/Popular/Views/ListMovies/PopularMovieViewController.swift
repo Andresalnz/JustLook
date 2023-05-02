@@ -31,20 +31,23 @@ class PopularMovieViewController: UIViewController {
     
     //MARK: - Styles
     func styles() {
-        self.collectionPopularMovies.backgroundColor = .black
+        self.collectionPopularMovies.backgroundColor = .white
     }
 }
 
 extension PopularMovieViewController: PopularMovieUI {
-    func update(moview: ResultMovieBO) {
-        print(moview)
+    func update(moview: [ResultMovieBO]) {
+        DispatchQueue.main.async {
+            self.collectionPopularMovies.reloadData()
+        }
     }
 }
 
 //MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension PopularMovieViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        guard let items = presenter?.movies.count else { return 0 }
+        return items
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -54,6 +57,10 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         guard let cell: PopularMovieCollectionViewCell = collectionPopularMovies.dequeueReusableCell(withReuseIdentifier: PopularMovieCollectionViewCell.identifier, for: indexPath) as? PopularMovieCollectionViewCell else {
             return UICollectionViewCell()
         }
+        if let item = presenter?.movies[indexPath.row] {
+            cell.paintCell(item: item)
+        }
+        
         return cell
     }
     
