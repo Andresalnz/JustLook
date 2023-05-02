@@ -12,6 +12,12 @@ class PopularMovieViewController: UIViewController {
     //MARK: - IBOutlet
     @IBOutlet weak var collectionPopularMovies: UICollectionView!
     
+    //Buttons
+    @IBOutlet weak var viewButtons: UIView!
+    @IBOutlet weak var btnAll: UIButton!
+    @IBOutlet weak var btnSeries: UIButton!
+    @IBOutlet weak var btnMovies: UIButton!
+    
     //MARK: - Variables
     var presenter: PopularMoviePresenter?
     
@@ -32,6 +38,19 @@ class PopularMovieViewController: UIViewController {
     //MARK: - Styles
     func styles() {
         self.collectionPopularMovies.backgroundColor = .black
+    }
+    
+    //MARK: - Actions
+    @IBAction func btnAllAction(_ sender: Any) {
+        
+    }
+    
+    
+    @IBAction func btnSeriesAction(_ sender: Any) {
+    }
+    
+    @IBAction func btnMovieAction(_ sender: Any) {
+        presenter?.onViewAppear()
     }
 }
 

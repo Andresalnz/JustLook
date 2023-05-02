@@ -11,8 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopularMovieViewController" customModule="JustLook" customModuleProvider="target">
             <connections>
+                <outlet property="btnAll" destination="28H-Dr-605" id="x7T-81-hcu"/>
+                <outlet property="btnMovies" destination="cIz-DM-x32" id="5tU-uQ-G4y"/>
+                <outlet property="btnSeries" destination="td0-s4-FYU" id="dUq-YC-ogt"/>
                 <outlet property="collectionPopularMovies" destination="mq1-8v-jka" id="Paq-u4-bQR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewButtons" destination="Hvp-AB-lRg" id="UA1-Uf-lSs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mq1-8v-jka">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <rect key="frame" x="0.0" y="154" width="393" height="698"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hn4-JW-Tqy">
                         <size key="itemSize" width="128" height="128"/>
@@ -30,15 +34,66 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvp-AB-lRg">
+                    <rect key="frame" x="0.0" y="113" width="393" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28H-Dr-605">
+                            <rect key="frame" x="0.0" y="10" width="62" height="21"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Todo"/>
+                            <connections>
+                                <action selector="btnAllAction:" destination="-1" eventType="touchUpInside" id="wud-7N-tV9"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td0-s4-FYU">
+                            <rect key="frame" x="82" y="10" width="72" height="21"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Series"/>
+                            <connections>
+                                <action selector="btnSeriesAction:" destination="-1" eventType="touchUpInside" id="GAO-ho-q9b"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIz-DM-x32">
+                            <rect key="frame" x="174" y="10" width="91" height="21"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Peliculas"/>
+                            <connections>
+                                <action selector="btnMovieAction:" destination="-1" eventType="touchUpInside" id="CFy-YJ-XUM"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="cIz-DM-x32" secondAttribute="bottom" constant="9" id="Cuc-ds-b1f"/>
+                        <constraint firstAttribute="height" constant="40" id="DmV-M4-rqD"/>
+                        <constraint firstItem="cIz-DM-x32" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" constant="10" id="JIV-nn-F8G"/>
+                        <constraint firstItem="28H-Dr-605" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" constant="10" id="O9v-m5-yPd"/>
+                        <constraint firstAttribute="bottom" secondItem="td0-s4-FYU" secondAttribute="bottom" constant="9" id="PMG-Ni-qPR"/>
+                        <constraint firstItem="td0-s4-FYU" firstAttribute="leading" secondItem="28H-Dr-605" secondAttribute="trailing" constant="20" id="XtE-7d-XiT"/>
+                        <constraint firstItem="td0-s4-FYU" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" constant="10" id="cyz-bF-LWS"/>
+                        <constraint firstItem="28H-Dr-605" firstAttribute="leading" secondItem="Hvp-AB-lRg" secondAttribute="leading" id="jIj-gw-uzH"/>
+                        <constraint firstAttribute="bottom" secondItem="28H-Dr-605" secondAttribute="bottom" constant="9" id="tD8-sF-Y1t"/>
+                        <constraint firstItem="cIz-DM-x32" firstAttribute="leading" secondItem="td0-s4-FYU" secondAttribute="trailing" constant="20" id="uvv-oc-urW"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="mq1-8v-jka" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CS8-JY-OXI"/>
-                <constraint firstAttribute="bottom" secondItem="mq1-8v-jka" secondAttribute="bottom" id="m7a-gY-b3Q"/>
+                <constraint firstItem="Hvp-AB-lRg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GNq-bq-kA0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hvp-AB-lRg" secondAttribute="trailing" id="LE2-tc-fH4"/>
+                <constraint firstItem="Hvp-AB-lRg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="54" id="RZy-VV-wVj"/>
+                <constraint firstItem="mq1-8v-jka" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="bottom" constant="1" id="fQb-31-Fw5"/>
+                <constraint firstItem="mq1-8v-jka" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="34" id="kg5-T6-TA6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mq1-8v-jka" secondAttribute="trailing" id="sBQ-za-LFz"/>
                 <constraint firstItem="mq1-8v-jka" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wG4-Jb-Saa"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="wG4-Jb-Saa"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="124.42748091603053" y="-11.267605633802818"/>
         </view>
     </objects>
