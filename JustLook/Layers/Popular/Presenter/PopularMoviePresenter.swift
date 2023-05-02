@@ -10,6 +10,7 @@ import Foundation
 final class PopularMoviePresenter {
     weak var ui: PopularMovieUI?
     let popularMovieInteractor: PopularMovieInteractor
+    var movies: [ResultMovieBO] = []
     
     init(popularMovieInteractor: PopularMovieInteractor) {
         self.popularMovieInteractor = popularMovieInteractor
@@ -28,7 +29,8 @@ extension PopularMoviePresenter: PopularMoviePresenterInteractor {
             guard let wSelf = self else {return }
             switch data {
             case .success(let response):
-                wSelf.ui?.update(moview: response)
+                wSelf.movies.append(response)
+                wSelf.ui?.update(moview: wSelf.movies)
             case .failure(let error):
                 print(error)
             }
