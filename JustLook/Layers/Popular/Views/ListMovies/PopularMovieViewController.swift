@@ -31,7 +31,7 @@ class PopularMovieViewController: UIViewController {
     
     //MARK: - Styles
     func styles() {
-        self.collectionPopularMovies.backgroundColor = .white
+        self.collectionPopularMovies.backgroundColor = .black
     }
 }
 
@@ -62,6 +62,14 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
