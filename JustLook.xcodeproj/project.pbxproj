@@ -25,6 +25,7 @@
 		9F3BD7A529F85E2D009791B6 /* PopularMovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3BD7A429F85E2D009791B6 /* PopularMovieRouter.swift */; };
 		9F3F74982A00FEBC00F136CC /* PopularMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F74962A00FEBC00F136CC /* PopularMovieCollectionViewCell.swift */; };
 		9F3F74992A00FEBC00F136CC /* PopularMovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3F74972A00FEBC00F136CC /* PopularMovieCollectionViewCell.xib */; };
+		9F3F749C2A01322500F136CC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9F3F749B2A01322500F136CC /* Kingfisher */; };
 		9F69F8A029F936BF00444ED0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69F89F29F936BF00444ED0 /* Protocols.swift */; };
 		9FF4A78429FBE36A00966630 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78329FBE36A00966630 /* Constants.swift */; };
 		9FF4A78F29FC3C9E00966630 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78E29FC3C9E00966630 /* Util.swift */; };
@@ -80,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F3F749C2A01322500F136CC /* Kingfisher in Frameworks */,
 				9F3BD79A29F7F44F009791B6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +312,7 @@
 			name = JustLook;
 			packageProductDependencies = (
 				9F3BD79929F7F44F009791B6 /* Alamofire */,
+				9F3F749B2A01322500F136CC /* Kingfisher */,
 			);
 			productName = JustLook;
 			productReference = 9F113BC629F6CA9F0017101D /* JustLook.app */;
@@ -385,6 +388,7 @@
 			mainGroup = 9F113BBD29F6CA9F0017101D;
 			packageReferences = (
 				9F3BD79829F7F44F009791B6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9F3F749A2A01322500F136CC /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 9F113BC729F6CA9F0017101D /* Products */;
 			projectDirPath = "";
@@ -774,6 +778,14 @@
 				version = 5.6.4;
 			};
 		};
+		9F3F749A2A01322500F136CC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -781,6 +793,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9F3BD79829F7F44F009791B6 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		9F3F749B2A01322500F136CC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9F3F749A2A01322500F136CC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 
