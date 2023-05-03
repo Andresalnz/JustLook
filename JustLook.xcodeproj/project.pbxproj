@@ -193,10 +193,8 @@
 		9F113C0029F6CC780017101D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9F113C0929F6D89F0017101D /* Mapper */,
-				9F113C0729F6D7950017101D /* DTO */,
-				9F113C0529F6D77C0017101D /* BO */,
-				9F113C0629F6D7840017101D /* VO */,
+				9F3F749E2A0244B100F136CC /* Series */,
+				9F3F749D2A02449600F136CC /* Movie */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +282,24 @@
 				9F3F74972A00FEBC00F136CC /* PopularMovieCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		9F3F749D2A02449600F136CC /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				9F113C0929F6D89F0017101D /* Mapper */,
+				9F113C0729F6D7950017101D /* DTO */,
+				9F113C0529F6D77C0017101D /* BO */,
+				9F113C0629F6D7840017101D /* VO */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		9F3F749E2A0244B100F136CC /* Series */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Series;
 			sourceTree = "<group>";
 		};
 		9FF4A78C29FC39F300966630 /* Config */ = {
