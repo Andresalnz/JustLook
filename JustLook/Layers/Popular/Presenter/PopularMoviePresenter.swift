@@ -25,12 +25,17 @@ extension PopularMoviePresenter: PopularMoviewUIPresenter {
 
 extension PopularMoviePresenter: PopularMoviePresenterInteractor {
     func loadPopularMovies() {
-        popularMovieInteractor.getPopularMovies() { [weak self] data in
+        popularMovieInteractor.getPopularMovies(url: Util.Services.popularMovie.shapeURL(), type: PopularMovieDTO.self) { [weak self] data in
             guard let wSelf = self else {return }
             switch data {
             case .success(let response):
-                wSelf.movies.append(response)
-                wSelf.ui?.update(moview: wSelf.movies)
+                if let movie: [ResultMovieDTO] = response.results {
+                    movie.forEach({ movie in
+                        guard let movie = movie.toBO() else { return }
+                        wSelf.movies.append(movie)
+                    })
+                    wSelf.ui?.update(moview: wSelf.movies)
+                }
             case .failure(let error):
                 print(error)
             }
