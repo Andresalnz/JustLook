@@ -47,16 +47,20 @@ class PopularMovieViewController: UIViewController {
     
     
     @IBAction func btnSeriesAction(_ sender: Any) {
-        print("hola")
+        self.btnSeries.isSelected = true
+        self.btnMovies.isSelected = false
+        presenter?.loadPopularSeries()
     }
     
     @IBAction func btnMovieAction(_ sender: Any) {
+        self.btnSeries.isSelected = false
+        self.btnMovies.isSelected = true
         presenter?.loadPopularMovies()
     }
 }
 
 extension PopularMovieViewController: PopularMovieUI {
-    func update(moview: [ResultMovieBO]) {
+    func update() {
         DispatchQueue.main.async {
             self.collectionPopularMovies.reloadData()
         }
@@ -66,9 +70,18 @@ extension PopularMovieViewController: PopularMovieUI {
 //MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension PopularMovieViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let items = presenter?.movies.count else { return 0 }
-        return items
+        let btnMovie = self.btnMovies.isSelected
+        let btnSerie = self.btnSeries.isSelected
+        if btnMovie {
+            guard let items = presenter?.movies.count else { return 0 }
+            return items
+        } else if btnSerie {
+            guard let items = presenter?.series.count else { return 0 }
+            return items
+        }
+        return 1
     }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -77,8 +90,19 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         guard let cell: PopularMovieCollectionViewCell = collectionPopularMovies.dequeueReusableCell(withReuseIdentifier: PopularMovieCollectionViewCell.identifier, for: indexPath) as? PopularMovieCollectionViewCell else {
             return UICollectionViewCell()
         }
-        if let item = presenter?.movies[indexPath.row] {
-            cell.paintCell(item: item)
+        
+        let btnMovie = self.btnMovies.isSelected
+        let btnSerie = self.btnSeries.isSelected
+        
+        if  btnMovie {
+            if let item = presenter?.movies[indexPath.row] {
+                cell.paintCell(item: item)
+            }
+        } else if btnSerie {
+           
+            if let item = presenter?.series[indexPath.row] {
+                cell.paintCellSerie(item: item)
+            }
         }
         
         return cell

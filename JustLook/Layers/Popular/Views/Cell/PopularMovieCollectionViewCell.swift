@@ -37,5 +37,15 @@ class PopularMovieCollectionViewCell: UICollectionViewCell {
         lblNote.text = String(format: "%.1f", item.voteAverage!)
         
     }
+    
+    func paintCellSerie(item: ResultSerieBO) {
+        guard let buildImage = Constants.buildImage else { return }
+        guard let posterPath = item.posterPath else { return }
+        let image = URL(string: ("\(buildImage)\(posterPath)"))
+        imgMovie.kf.setImage(with: image)
+        imgIconImdb.image = UIImage(named: "icon-imdb")
+        lblNote.text = String(format: "%.1f", item.voteAverage!)
+        
+    }
 
 }
