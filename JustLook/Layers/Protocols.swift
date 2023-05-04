@@ -9,7 +9,7 @@ import Foundation
 
 //Protocolo para conectar Presenter con Vista
 protocol PopularMovieUI: AnyObject {
-    func update(moview: [ResultMovieBO])
+    func update()
 }
 
 //Protocolo para conectar Vista con Presenter
@@ -20,4 +20,5 @@ protocol PopularMoviewUIPresenter: AnyObject {
 //Protocolo para conectar Presenter con Interactor
 protocol PopularMoviePresenterInteractor: AnyObject {
     func loadPopularMovies()
+    func loadPopularSeries()
 }
