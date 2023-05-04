@@ -22,6 +22,7 @@ final class Util {
     //MARK: - Formar URL segun peticion
     enum Services {
         case popularMovie
+        case popularSerie
         
         func shapeURL() ->URL? {
             let apiKey = Util.getApiKey()!
@@ -30,6 +31,8 @@ final class Util {
             case .popularMovie:
                 //TODO: Poner lenguage y paginacion
                 return URL(string: "\(uri)movie/popular?api_key=\(String(describing: apiKey))&language=en-US&page=1")
+            case .popularSerie:
+                return URL(string: "\(uri)tv/popular?api_key=\(String(describing: apiKey))&language=en-US&page=1")
             }
         }
     }

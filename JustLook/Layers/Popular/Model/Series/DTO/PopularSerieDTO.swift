@@ -9,7 +9,7 @@ import Foundation
 
 struct PopularSerieDTO: Codable {
     let page: Int?
-    let results: [ResultSerieDTO]
+    let results: [ResultSerieDTO]?
     let totalPage: Int?
     let totalResults: Int?
     
