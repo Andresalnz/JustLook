@@ -18,11 +18,17 @@ class PopularMovieViewController: UIViewController {
     @IBOutlet weak var btnSeries: UIButton!
     @IBOutlet weak var btnMovies: UIButton!
     
+    //Controller
+    @IBOutlet weak var lblTitleController: UILabel!
+    
+    @IBOutlet weak var btnSearch: UIButton!
+    
     //MARK: - Variables
     var presenter: PopularMoviePresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.btnAll.isSelected = true
         presenter?.viewDidLoad()
         styles()
         setUpCollection()
@@ -38,23 +44,32 @@ class PopularMovieViewController: UIViewController {
     //MARK: - Styles
     func styles() {
         self.collectionPopularMovies.backgroundColor = .black
+        //navigation
+        self.lblTitleController.text = "Populares"
+        self.btnSearch.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
+        self.btnSearch.tintColor = .black
     }
     
     //MARK: - Actions
     @IBAction func btnAllAction(_ sender: Any) {
-        
+        self.btnSeries.isSelected = false
+        self.btnMovies.isSelected = false
+        self.btnAll.isSelected = true
+        presenter?.loadPopularMovies()
     }
     
     
     @IBAction func btnSeriesAction(_ sender: Any) {
         self.btnSeries.isSelected = true
         self.btnMovies.isSelected = false
+        self.btnAll.isSelected = false
         presenter?.loadPopularSeries()
     }
     
     @IBAction func btnMovieAction(_ sender: Any) {
         self.btnSeries.isSelected = false
         self.btnMovies.isSelected = true
+        self.btnAll.isSelected = false
         presenter?.loadPopularMovies()
     }
 }
@@ -72,7 +87,9 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let btnMovie = self.btnMovies.isSelected
         let btnSerie = self.btnSeries.isSelected
-        if btnMovie {
+        let btnAll = self.btnAll.isSelected
+        
+        if btnMovie || btnAll {
             guard let items = presenter?.movies.count else { return 0 }
             return items
         } else if btnSerie {
@@ -93,8 +110,9 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         
         let btnMovie = self.btnMovies.isSelected
         let btnSerie = self.btnSeries.isSelected
+        let btnAll = self.btnAll.isSelected
         
-        if  btnMovie {
+        if  btnMovie || btnAll {
             if let item = presenter?.movies[indexPath.row] {
                 cell.paintCell(item: item)
             }
