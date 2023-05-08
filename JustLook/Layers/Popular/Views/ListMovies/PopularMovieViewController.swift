@@ -19,6 +19,7 @@ class PopularMovieViewController: UIViewController {
     @IBOutlet weak var btnMovies: UIButton!
     
     //Controller
+    @IBOutlet weak var viewController: UIView!
     @IBOutlet weak var lblTitleController: UILabel!
     
     @IBOutlet weak var btnSearch: UIButton!
@@ -44,10 +45,19 @@ class PopularMovieViewController: UIViewController {
     //MARK: - Styles
     func styles() {
         self.collectionPopularMovies.backgroundColor = .black
-        //navigation
-        self.lblTitleController.text = "Populares"
-        self.btnSearch.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
-        self.btnSearch.tintColor = .black
+        
+        //Controller
+        self.lblTitleController.generalLabel("Populares", .white, .boldSystemFont(ofSize: 20))
+        self.btnSearch.generalButtonWithImage("", tintColor: .white, image: UIImage(systemName: "magnifyingglass"))
+      
+        //buttons
+        self.btnAll.generalButton("Todo", tintColor: .white)
+        self.btnMovies.generalButton("Peliculas", tintColor: .white)
+        self.btnSeries.generalButton("Series", tintColor: .white)
+        
+        //views
+        self.viewButtons.backgroundColor = .black
+        self.viewController.backgroundColor = .black
     }
     
     //MARK: - Actions
