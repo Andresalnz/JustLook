@@ -19,6 +19,7 @@
                 <outlet property="lblTitleController" destination="gaQ-KS-0sm" id="EE4-JO-nqy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewButtons" destination="Hvp-AB-lRg" id="UA1-Uf-lSs"/>
+                <outlet property="viewController" destination="pHa-rl-YTJ" id="LFj-Ll-2vY"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -27,7 +28,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mq1-8v-jka">
-                    <rect key="frame" x="0.0" y="146" width="393" height="706"/>
+                    <rect key="frame" x="0.0" y="145" width="393" height="707"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hn4-JW-Tqy">
                         <size key="itemSize" width="128" height="128"/>
@@ -82,7 +83,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="105"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Populares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaQ-KS-0sm">
-                            <rect key="frame" x="183" y="81" width="76" height="21"/>
+                            <rect key="frame" x="193" y="81" width="76" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -95,7 +96,7 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="gaQ-KS-0sm" firstAttribute="top" secondItem="pHa-rl-YTJ" secondAttribute="top" constant="81" id="CKb-DV-fVG"/>
-                        <constraint firstItem="xMv-PB-vQq" firstAttribute="leading" secondItem="gaQ-KS-0sm" secondAttribute="trailing" constant="110" id="H4x-TY-pt9"/>
+                        <constraint firstItem="xMv-PB-vQq" firstAttribute="leading" secondItem="gaQ-KS-0sm" secondAttribute="trailing" constant="100" id="H4x-TY-pt9"/>
                         <constraint firstAttribute="bottom" secondItem="xMv-PB-vQq" secondAttribute="bottom" id="IuP-DJ-FVD"/>
                         <constraint firstAttribute="height" constant="105" id="Iz9-FL-1WJ"/>
                         <constraint firstItem="xMv-PB-vQq" firstAttribute="top" secondItem="pHa-rl-YTJ" secondAttribute="top" constant="75" id="KKk-8z-zeq"/>
@@ -114,7 +115,7 @@
                 <constraint firstItem="Hvp-AB-lRg" firstAttribute="top" secondItem="pHa-rl-YTJ" secondAttribute="bottom" id="K41-SN-IwA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hvp-AB-lRg" secondAttribute="trailing" id="LE2-tc-fH4"/>
                 <constraint firstItem="pHa-rl-YTJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OBN-Ne-6KV"/>
-                <constraint firstItem="mq1-8v-jka" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="bottom" constant="1" id="fQb-31-Fw5"/>
+                <constraint firstItem="mq1-8v-jka" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="bottom" id="fQb-31-Fw5"/>
                 <constraint firstItem="mq1-8v-jka" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="34" id="kg5-T6-TA6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mq1-8v-jka" secondAttribute="trailing" id="sBQ-za-LFz"/>
                 <constraint firstItem="mq1-8v-jka" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wG4-Jb-Saa"/>
