@@ -66,6 +66,9 @@ class PopularMovieViewController: UIViewController {
         self.btnMovies.isSelected = false
         self.btnAll.isSelected = true
         presenter?.loadPopularMovies()
+        if presenter?.movies.count == 0 {
+            presenter?.loadPopularMovies()
+        }
     }
     
     
@@ -74,13 +77,19 @@ class PopularMovieViewController: UIViewController {
         self.btnMovies.isSelected = false
         self.btnAll.isSelected = false
         presenter?.loadPopularSeries()
+        if presenter?.series.count == 0 {
+            presenter?.loadPopularSeries()
+        }
     }
     
     @IBAction func btnMovieAction(_ sender: Any) {
         self.btnSeries.isSelected = false
         self.btnMovies.isSelected = true
         self.btnAll.isSelected = false
-        presenter?.loadPopularMovies()
+        if presenter?.movies.count == 0 {
+            presenter?.loadPopularMovies()
+        }
+        
     }
 }
 
@@ -118,6 +127,10 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
             return UICollectionViewCell()
         }
         
+        //Ultimo indice para sumar uno a page en el presenter y cargar mas peliculas o series
+        let lastIndexMovie = (self.presenter?.movies.count)! - 1
+        let lastIndexSerie = (self.presenter?.series.count)! - 1
+        
         let btnMovie = self.btnMovies.isSelected
         let btnSerie = self.btnSeries.isSelected
         let btnAll = self.btnAll.isSelected
@@ -126,13 +139,21 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
             if let item = presenter?.movies[indexPath.row] {
                 cell.paintCell(item: item)
             }
+            if indexPath.row == lastIndexMovie {
+                presenter?.page += 1
+                presenter?.loadPopularMovies()
+            }
+            
         } else if btnSerie {
-           
             if let item = presenter?.series[indexPath.row] {
                 cell.paintCellSerie(item: item)
             }
+            if indexPath.row == lastIndexSerie {
+                presenter?.page += 1
+                presenter?.loadPopularSeries()
+                self.collectionPopularMovies.reloadData()
+            }
         }
-        
         return cell
     }
     

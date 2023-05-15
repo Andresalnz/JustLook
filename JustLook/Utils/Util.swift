@@ -24,13 +24,13 @@ final class Util {
         case popularMovie
         case popularSerie
         
-        func shapeURL() ->URL? {
+        func shapeURL(page: Int) ->URL? {
             let apiKey = Util.getApiKey()!
             let uri = Constants.TMDuri
             switch self {
             case .popularMovie:
                 //TODO: Poner lenguage y paginacion
-                return URL(string: "\(uri)movie/popular?api_key=\(String(describing: apiKey))&language=en-US&page=1")
+                return URL(string: "\(uri)movie/popular?api_key=\(String(describing: apiKey))&language=en-US&page=\(page)")
             case .popularSerie:
                 return URL(string: "\(uri)tv/popular?api_key=\(String(describing: apiKey))&language=en-US&page=1")
             }

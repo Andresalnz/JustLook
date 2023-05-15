@@ -13,6 +13,8 @@ final class PopularMoviePresenter {
     var movies: [ResultMovieBO] = []
     var series: [ResultSerieBO] = []
     
+    var page: Int = 1
+    
     init(popularMovieInteractor: PopularMovieInteractor) {
         self.popularMovieInteractor = popularMovieInteractor
     }
@@ -26,7 +28,7 @@ extension PopularMoviePresenter: PopularMoviewUIPresenter {
 
 extension PopularMoviePresenter: PopularMoviePresenterInteractor {
     func loadPopularMovies() {
-        popularMovieInteractor.getPopularMovies(url: Util.Services.popularMovie.shapeURL(), type: PopularMovieDTO.self) { [weak self] data in
+        popularMovieInteractor.getPopularMovies(url: Util.Services.popularMovie.shapeURL(page: page), type: PopularMovieDTO.self) { [weak self] data in
             guard let wSelf = self else {return }
             switch data {
             case .success(let response):
@@ -41,11 +43,10 @@ extension PopularMoviePresenter: PopularMoviePresenterInteractor {
                 print(error)
             }
         }
-        
     }
     
     func loadPopularSeries() {
-        popularMovieInteractor.getPopularMovies(url: Util.Services.popularSerie.shapeURL(), type: PopularSerieDTO.self) { [weak self] data in
+        popularMovieInteractor.getPopularMovies(url: Util.Services.popularSerie.shapeURL(page: page), type: PopularSerieDTO.self) { [weak self] data in
             guard let wSelf = self else { return  }
             switch data {
             case .success(let response):
@@ -59,7 +60,6 @@ extension PopularMoviePresenter: PopularMoviePresenterInteractor {
             case .failure(let error):
                 print(error)
             }
-            
         }
     }
 }
