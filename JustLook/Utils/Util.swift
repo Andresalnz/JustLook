@@ -32,7 +32,7 @@ final class Util {
                 //TODO: Poner lenguage y paginacion
                 return URL(string: "\(uri)movie/popular?api_key=\(String(describing: apiKey))&language=en-US&page=\(page)")
             case .popularSerie:
-                return URL(string: "\(uri)tv/popular?api_key=\(String(describing: apiKey))&language=en-US&page=1")
+                return URL(string: "\(uri)tv/popular?api_key=\(String(describing: apiKey))&language=en-US&page=\(page)")
             }
         }
     }
