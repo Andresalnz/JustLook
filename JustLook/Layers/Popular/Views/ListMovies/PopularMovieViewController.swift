@@ -65,10 +65,11 @@ class PopularMovieViewController: UIViewController {
         self.btnSeries.isSelected = false
         self.btnMovies.isSelected = false
         self.btnAll.isSelected = true
-        presenter?.loadPopularMovies()
+        presenter?.page = 1
         if presenter?.movies.count == 0 {
             presenter?.loadPopularMovies()
         }
+        self.update()
     }
     
     
@@ -76,19 +77,22 @@ class PopularMovieViewController: UIViewController {
         self.btnSeries.isSelected = true
         self.btnMovies.isSelected = false
         self.btnAll.isSelected = false
-        presenter?.loadPopularSeries()
+        presenter?.page = 1
         if presenter?.series.count == 0 {
             presenter?.loadPopularSeries()
         }
+        self.update()
     }
     
     @IBAction func btnMovieAction(_ sender: Any) {
         self.btnSeries.isSelected = false
         self.btnMovies.isSelected = true
         self.btnAll.isSelected = false
+        presenter?.page = 1
         if presenter?.movies.count == 0 {
             presenter?.loadPopularMovies()
         }
+        self.update()
         
     }
 }
@@ -151,7 +155,6 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
             if indexPath.row == lastIndexSerie {
                 presenter?.page += 1
                 presenter?.loadPopularSeries()
-                self.collectionPopularMovies.reloadData()
             }
         }
         return cell
