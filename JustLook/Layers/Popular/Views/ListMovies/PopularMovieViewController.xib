@@ -92,6 +92,9 @@
                             <rect key="frame" x="369" y="75" width="24" height="30"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title=""/>
+                            <connections>
+                                <action selector="btnSearchAction:" destination="-1" eventType="touchUpInside" id="C5O-C7-byK"/>
+                            </connections>
                         </button>
                     </subviews>
                     <constraints>

@@ -95,6 +95,12 @@ class PopularMovieViewController: UIViewController {
         self.update()
         
     }
+    
+    @IBAction func btnSearchAction(_ sender: Any) {
+        
+        self.present(SearchViewController(), animated: true)
+    }
+    
 }
 
 extension PopularMovieViewController: PopularMovieUI {
