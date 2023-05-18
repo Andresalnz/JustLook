@@ -30,12 +30,8 @@
 		9F3F74A52A02486300F136CC /* PopularSerieBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F74A42A02486300F136CC /* PopularSerieBO.swift */; };
 		9F3F74A72A0249E500F136CC /* PopularSerieMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3F74A62A0249E500F136CC /* PopularSerieMapper.swift */; };
 		9F69F8A029F936BF00444ED0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69F89F29F936BF00444ED0 /* Protocols.swift */; };
-		9FDF4F7A2A13A38F00324D02 /* ResultSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF4F782A13A38F00324D02 /* ResultSearchTableViewCell.swift */; };
-		9FDF4F7B2A13A38F00324D02 /* ResultSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FDF4F792A13A38F00324D02 /* ResultSearchTableViewCell.xib */; };
 		9FF4A78429FBE36A00966630 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78329FBE36A00966630 /* Constants.swift */; };
 		9FF4A78F29FC3C9E00966630 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78E29FC3C9E00966630 /* Util.swift */; };
-		9FFB585D2A08EF7F0011BDED /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB585B2A08EF7F0011BDED /* SearchViewController.swift */; };
-		9FFB585E2A08EF7F0011BDED /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFB585C2A08EF7F0011BDED /* SearchViewController.xib */; };
 		9FFB58612A08F1C70011BDED /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB58602A08F1C70011BDED /* UILabel+Extension.swift */; };
 		9FFB58632A08F57A0011BDED /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB58622A08F57A0011BDED /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -83,13 +79,9 @@
 		9F3F74A42A02486300F136CC /* PopularSerieBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSerieBO.swift; sourceTree = "<group>"; };
 		9F3F74A62A0249E500F136CC /* PopularSerieMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSerieMapper.swift; sourceTree = "<group>"; };
 		9F69F89F29F936BF00444ED0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		9FDF4F782A13A38F00324D02 /* ResultSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchTableViewCell.swift; sourceTree = "<group>"; };
-		9FDF4F792A13A38F00324D02 /* ResultSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultSearchTableViewCell.xib; sourceTree = "<group>"; };
 		9FF4A78329FBE36A00966630 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9FF4A78D29FC3A3200966630 /* privateConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = privateConfig.xcconfig; sourceTree = "<group>"; };
 		9FF4A78E29FC3C9E00966630 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		9FFB585B2A08EF7F0011BDED /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		9FFB585C2A08EF7F0011BDED /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		9FFB58602A08F1C70011BDED /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		9FFB58622A08F57A0011BDED /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,7 +186,6 @@
 		9F113BFE29F6CBB00017101D /* Layers */ = {
 			isa = PBXGroup;
 			children = (
-				9FFB58592A08EEDD0011BDED /* Search */,
 				9F113C0429F6CEA20017101D /* Popular */,
 				9F69F89F29F936BF00444ED0 /* Protocols.swift */,
 			);
@@ -349,39 +340,12 @@
 			path = Mapper;
 			sourceTree = "<group>";
 		};
-		9FDF4F772A13A36500324D02 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				9FDF4F782A13A38F00324D02 /* ResultSearchTableViewCell.swift */,
-				9FDF4F792A13A38F00324D02 /* ResultSearchTableViewCell.xib */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		9FF4A78C29FC39F300966630 /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				9FF4A78D29FC3A3200966630 /* privateConfig.xcconfig */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		9FFB58592A08EEDD0011BDED /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				9FFB585A2A08EEF70011BDED /* View */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		9FFB585A2A08EEF70011BDED /* View */ = {
-			isa = PBXGroup;
-			children = (
-				9FDF4F772A13A36500324D02 /* Cell */,
-				9FFB585B2A08EF7F0011BDED /* SearchViewController.swift */,
-				9FFB585C2A08EF7F0011BDED /* SearchViewController.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		9FFB585F2A08F1A10011BDED /* Extensions */ = {
@@ -507,8 +471,6 @@
 			files = (
 				9F113BD629F6CAA00017101D /* Assets.xcassets in Resources */,
 				9F3F74992A00FEBC00F136CC /* PopularMovieCollectionViewCell.xib in Resources */,
-				9FDF4F7B2A13A38F00324D02 /* ResultSearchTableViewCell.xib in Resources */,
-				9FFB585E2A08EF7F0011BDED /* SearchViewController.xib in Resources */,
 				9F3BD7A329F84FE5009791B6 /* PopularMovieViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,12 +510,10 @@
 				9F3F74982A00FEBC00F136CC /* PopularMovieCollectionViewCell.swift in Sources */,
 				9F3BD7A529F85E2D009791B6 /* PopularMovieRouter.swift in Sources */,
 				9FFB58632A08F57A0011BDED /* UIButton+Extension.swift in Sources */,
-				9FFB585D2A08EF7F0011BDED /* SearchViewController.swift in Sources */,
 				9F3F74A52A02486300F136CC /* PopularSerieBO.swift in Sources */,
 				9F113BCC29F6CA9F0017101D /* SceneDelegate.swift in Sources */,
 				9F3F74A32A02458500F136CC /* PopularSerieDTO.swift in Sources */,
 				9F3BD79529F7E333009791B6 /* PopularMovieMapper.swift in Sources */,
-				9FDF4F7A2A13A38F00324D02 /* ResultSearchTableViewCell.swift in Sources */,
 				9FF4A78429FBE36A00966630 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

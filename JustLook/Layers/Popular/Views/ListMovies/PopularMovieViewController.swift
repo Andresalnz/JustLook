@@ -22,7 +22,6 @@ class PopularMovieViewController: UIViewController {
     @IBOutlet weak var viewController: UIView!
     @IBOutlet weak var lblTitleController: UILabel!
     
-    @IBOutlet weak var btnSearch: UIButton!
     
     //MARK: - Variables
     var presenter: PopularMoviePresenter?
@@ -48,7 +47,7 @@ class PopularMovieViewController: UIViewController {
         
         //Controller
         self.lblTitleController.generalLabel("Populares", .white, .boldSystemFont(ofSize: 20))
-        self.btnSearch.generalButtonWithImage("", tintColor: .white, image: UIImage(systemName: "magnifyingglass"))
+       
       
         //buttons
         self.btnAll.generalButton("Todo", tintColor: .white)
@@ -95,12 +94,6 @@ class PopularMovieViewController: UIViewController {
         self.update()
         
     }
-    
-    @IBAction func btnSearchAction(_ sender: Any) {
-        
-        self.present(SearchViewController(), animated: true)
-    }
-    
 }
 
 extension PopularMovieViewController: PopularMovieUI {

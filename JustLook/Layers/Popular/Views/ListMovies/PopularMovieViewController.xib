@@ -13,7 +13,6 @@
             <connections>
                 <outlet property="btnAll" destination="28H-Dr-605" id="x7T-81-hcu"/>
                 <outlet property="btnMovies" destination="cIz-DM-x32" id="5tU-uQ-G4y"/>
-                <outlet property="btnSearch" destination="xMv-PB-vQq" id="Ofp-Ro-wsb"/>
                 <outlet property="btnSeries" destination="td0-s4-FYU" id="dUq-YC-ogt"/>
                 <outlet property="collectionPopularMovies" destination="mq1-8v-jka" id="Paq-u4-bQR"/>
                 <outlet property="lblTitleController" destination="gaQ-KS-0sm" id="EE4-JO-nqy"/>
@@ -83,28 +82,18 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="105"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Populares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaQ-KS-0sm">
-                            <rect key="frame" x="193" y="81" width="76" height="21"/>
+                            <rect key="frame" x="155" y="81" width="75.666666666666686" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMv-PB-vQq">
-                            <rect key="frame" x="369" y="75" width="24" height="30"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title=""/>
-                            <connections>
-                                <action selector="btnSearchAction:" destination="-1" eventType="touchUpInside" id="C5O-C7-byK"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="gaQ-KS-0sm" firstAttribute="top" secondItem="pHa-rl-YTJ" secondAttribute="top" constant="81" id="CKb-DV-fVG"/>
-                        <constraint firstItem="xMv-PB-vQq" firstAttribute="leading" secondItem="gaQ-KS-0sm" secondAttribute="trailing" constant="100" id="H4x-TY-pt9"/>
-                        <constraint firstAttribute="bottom" secondItem="xMv-PB-vQq" secondAttribute="bottom" id="IuP-DJ-FVD"/>
+                        <constraint firstItem="gaQ-KS-0sm" firstAttribute="leading" secondItem="pHa-rl-YTJ" secondAttribute="leading" constant="155" id="3a2-5c-wLg"/>
                         <constraint firstAttribute="height" constant="105" id="Iz9-FL-1WJ"/>
-                        <constraint firstItem="xMv-PB-vQq" firstAttribute="top" secondItem="pHa-rl-YTJ" secondAttribute="top" constant="75" id="KKk-8z-zeq"/>
-                        <constraint firstAttribute="bottom" secondItem="gaQ-KS-0sm" secondAttribute="bottom" constant="3" id="mnd-iL-hd8"/>
-                        <constraint firstAttribute="trailing" secondItem="xMv-PB-vQq" secondAttribute="trailing" id="y2G-3X-ot5"/>
+                        <constraint firstAttribute="bottom" secondItem="gaQ-KS-0sm" secondAttribute="bottom" constant="3" id="JzE-Wc-XWX"/>
+                        <constraint firstItem="gaQ-KS-0sm" firstAttribute="top" secondItem="pHa-rl-YTJ" secondAttribute="top" constant="81" id="LGA-bS-cV3"/>
+                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gaQ-KS-0sm" secondAttribute="trailing" constant="196" id="eR3-cY-obP"/>
                     </constraints>
                 </view>
             </subviews>
