@@ -24,7 +24,7 @@ class PopularMovieCollectionViewCell: UICollectionViewCell {
     }
     
     func styles() {
-        lblNote.textColor = .white
+        lblNote.textColor = .black
        
     }
     

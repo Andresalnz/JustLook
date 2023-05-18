@@ -43,20 +43,20 @@ class PopularMovieViewController: UIViewController {
     
     //MARK: - Styles
     func styles() {
-        self.collectionPopularMovies.backgroundColor = .black
+        self.collectionPopularMovies.backgroundColor = .white
         
         //Controller
-        self.lblTitleController.generalLabel("Populares", .white, .boldSystemFont(ofSize: 20))
+        self.lblTitleController.generalLabel("Populares", .black, .boldSystemFont(ofSize: 20))
        
       
         //buttons
-        self.btnAll.generalButton("Todo", tintColor: .white)
-        self.btnMovies.generalButton("Peliculas", tintColor: .white)
-        self.btnSeries.generalButton("Series", tintColor: .white)
+        self.btnAll.generalButton("Todo", tintColor: .black)
+        self.btnMovies.generalButton("Peliculas", tintColor: .black)
+        self.btnSeries.generalButton("Series", tintColor: .black)
         
         //views
-        self.viewButtons.backgroundColor = .black
-        self.viewController.backgroundColor = .black
+        self.viewButtons.backgroundColor = .white
+        self.viewController.backgroundColor = .white
     }
     
     //MARK: - Actions

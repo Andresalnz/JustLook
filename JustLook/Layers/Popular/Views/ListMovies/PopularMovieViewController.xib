@@ -27,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mq1-8v-jka">
-                    <rect key="frame" x="0.0" y="145" width="393" height="707"/>
+                    <rect key="frame" x="0.0" y="215" width="393" height="637"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hn4-JW-Tqy">
                         <size key="itemSize" width="128" height="128"/>
@@ -37,10 +37,10 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvp-AB-lRg">
-                    <rect key="frame" x="0.0" y="105" width="393" height="40"/>
+                    <rect key="frame" x="0.0" y="168" width="393" height="40"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28H-Dr-605">
-                            <rect key="frame" x="0.0" y="10" width="62" height="21"/>
+                            <rect key="frame" x="0.0" y="0.0" width="62" height="40"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Todo"/>
                             <connections>
@@ -48,7 +48,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td0-s4-FYU">
-                            <rect key="frame" x="82" y="10" width="72" height="21"/>
+                            <rect key="frame" x="82" y="0.0" width="72" height="40"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Series"/>
                             <connections>
@@ -56,7 +56,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIz-DM-x32">
-                            <rect key="frame" x="174" y="10" width="91" height="21"/>
+                            <rect key="frame" x="174" y="0.0" width="91" height="40"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Peliculas"/>
                             <connections>
@@ -66,15 +66,15 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="cIz-DM-x32" secondAttribute="bottom" constant="9" id="Cuc-ds-b1f"/>
+                        <constraint firstAttribute="bottom" secondItem="cIz-DM-x32" secondAttribute="bottom" id="Cuc-ds-b1f"/>
                         <constraint firstAttribute="height" constant="40" id="DmV-M4-rqD"/>
-                        <constraint firstItem="cIz-DM-x32" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" constant="10" id="JIV-nn-F8G"/>
-                        <constraint firstItem="28H-Dr-605" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" constant="10" id="O9v-m5-yPd"/>
-                        <constraint firstAttribute="bottom" secondItem="td0-s4-FYU" secondAttribute="bottom" constant="9" id="PMG-Ni-qPR"/>
+                        <constraint firstItem="cIz-DM-x32" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" id="JIV-nn-F8G"/>
+                        <constraint firstItem="28H-Dr-605" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" id="O9v-m5-yPd"/>
+                        <constraint firstAttribute="bottom" secondItem="td0-s4-FYU" secondAttribute="bottom" id="PMG-Ni-qPR"/>
                         <constraint firstItem="td0-s4-FYU" firstAttribute="leading" secondItem="28H-Dr-605" secondAttribute="trailing" constant="20" id="XtE-7d-XiT"/>
-                        <constraint firstItem="td0-s4-FYU" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" constant="10" id="cyz-bF-LWS"/>
+                        <constraint firstItem="td0-s4-FYU" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" id="cyz-bF-LWS"/>
                         <constraint firstItem="28H-Dr-605" firstAttribute="leading" secondItem="Hvp-AB-lRg" secondAttribute="leading" id="jIj-gw-uzH"/>
-                        <constraint firstAttribute="bottom" secondItem="28H-Dr-605" secondAttribute="bottom" constant="9" id="tD8-sF-Y1t"/>
+                        <constraint firstAttribute="bottom" secondItem="28H-Dr-605" secondAttribute="bottom" id="tD8-sF-Y1t"/>
                         <constraint firstItem="cIz-DM-x32" firstAttribute="leading" secondItem="td0-s4-FYU" secondAttribute="trailing" constant="20" id="uvv-oc-urW"/>
                     </constraints>
                 </view>
@@ -82,7 +82,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="105"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Populares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaQ-KS-0sm">
-                            <rect key="frame" x="155" y="81" width="75.666666666666686" height="21"/>
+                            <rect key="frame" x="155" y="81" width="75.666666666666686" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -91,11 +91,18 @@
                     <constraints>
                         <constraint firstItem="gaQ-KS-0sm" firstAttribute="leading" secondItem="pHa-rl-YTJ" secondAttribute="leading" constant="155" id="3a2-5c-wLg"/>
                         <constraint firstAttribute="height" constant="105" id="Iz9-FL-1WJ"/>
-                        <constraint firstAttribute="bottom" secondItem="gaQ-KS-0sm" secondAttribute="bottom" constant="3" id="JzE-Wc-XWX"/>
+                        <constraint firstAttribute="bottom" secondItem="gaQ-KS-0sm" secondAttribute="bottom" constant="8" id="JzE-Wc-XWX"/>
                         <constraint firstItem="gaQ-KS-0sm" firstAttribute="top" secondItem="pHa-rl-YTJ" secondAttribute="top" constant="81" id="LGA-bS-cV3"/>
                         <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gaQ-KS-0sm" secondAttribute="trailing" constant="196" id="eR3-cY-obP"/>
                     </constraints>
                 </view>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="gLF-r8-TgC">
+                    <rect key="frame" x="0.0" y="112" width="393" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="DOc-A7-RTz"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,14 +110,17 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pHa-rl-YTJ" secondAttribute="trailing" id="2gK-0f-8RB"/>
                 <constraint firstItem="mq1-8v-jka" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CS8-JY-OXI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="pHa-rl-YTJ" secondAttribute="top" constant="59" id="FhK-7a-nAG"/>
+                <constraint firstItem="gLF-r8-TgC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Flq-Wb-rME"/>
                 <constraint firstItem="Hvp-AB-lRg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GNq-bq-kA0"/>
-                <constraint firstItem="Hvp-AB-lRg" firstAttribute="top" secondItem="pHa-rl-YTJ" secondAttribute="bottom" id="K41-SN-IwA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hvp-AB-lRg" secondAttribute="trailing" id="LE2-tc-fH4"/>
                 <constraint firstItem="pHa-rl-YTJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OBN-Ne-6KV"/>
-                <constraint firstItem="mq1-8v-jka" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="bottom" id="fQb-31-Fw5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gLF-r8-TgC" secondAttribute="trailing" id="erF-bh-ESh"/>
+                <constraint firstItem="mq1-8v-jka" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="bottom" constant="7" id="fQb-31-Fw5"/>
                 <constraint firstItem="mq1-8v-jka" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="34" id="kg5-T6-TA6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mq1-8v-jka" secondAttribute="trailing" id="sBQ-za-LFz"/>
+                <constraint firstItem="Hvp-AB-lRg" firstAttribute="top" secondItem="gLF-r8-TgC" secondAttribute="bottom" id="uMa-bu-cK0"/>
                 <constraint firstItem="mq1-8v-jka" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="wG4-Jb-Saa"/>
+                <constraint firstItem="gLF-r8-TgC" firstAttribute="top" secondItem="pHa-rl-YTJ" secondAttribute="bottom" constant="7" id="yE0-H0-tbO"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
