@@ -12,8 +12,9 @@ final class PopularMoviePresenter {
     let popularMovieInteractor: PopularMovieInteractor
     var movies: [ResultMovieBO] = []
     var series: [ResultSerieBO] = []
-    
+    var filterDataMovies: [ResultMovieBO]?
     var page: Int = 1
+    var filter: Bool = false
     
     init(popularMovieInteractor: PopularMovieInteractor) {
         self.popularMovieInteractor = popularMovieInteractor
@@ -35,6 +36,9 @@ extension PopularMoviePresenter: PopularMoviePresenterInteractor {
                 if let movie: [ResultMovieDTO] = response.results {
                     movie.forEach({ movie in
                         guard let movie = movie.toBO() else { return }
+                        if wSelf.filter {
+                            wSelf.filterDataMovies!.append(movie)
+                        }
                         wSelf.movies.append(movie)
                     })
                     wSelf.ui?.update()

@@ -22,6 +22,8 @@ class PopularMovieViewController: UIViewController {
     @IBOutlet weak var viewController: UIView!
     @IBOutlet weak var lblTitleController: UILabel!
     
+    //search
+    @IBOutlet weak var searchMedia: UISearchBar!
     
     //MARK: - Variables
     var presenter: PopularMoviePresenter?
@@ -32,6 +34,7 @@ class PopularMovieViewController: UIViewController {
         presenter?.viewDidLoad()
         styles()
         setUpCollection()
+        searchMedia.showsCancelButton = true
     }
     
     //MARK: - setUpCollection
@@ -98,8 +101,15 @@ class PopularMovieViewController: UIViewController {
 
 extension PopularMovieViewController: PopularMovieUI {
     func update() {
-        DispatchQueue.main.async {
-            self.collectionPopularMovies.reloadData()
+
+        if presenter?.page == 1 {
+            DispatchQueue.main.async {
+                self.collectionPopularMovies.reloadData()
+            }
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.collectionPopularMovies.reloadData()
+            }
         }
     }
 }
@@ -112,8 +122,9 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         let btnAll = self.btnAll.isSelected
         
         if btnMovie || btnAll {
-            guard let items = presenter?.movies.count else { return 0 }
-            return items
+            guard let items1 =  presenter?.movies.count else { return 0 }
+            guard let items =  presenter?.filterDataMovies?.count else { return items1 }
+            return presenter!.filter ? items : items1
         } else if btnSerie {
             guard let items = presenter?.series.count else { return 0 }
             return items
@@ -133,21 +144,31 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         //Ultimo indice para sumar uno a page en el presenter y cargar mas peliculas o series
         let lastIndexMovie = (self.presenter?.movies.count)! - 1
         let lastIndexSerie = (self.presenter?.series.count)! - 1
+        var lastIndexMovies: Int = 0
         
         let btnMovie = self.btnMovies.isSelected
         let btnSerie = self.btnSeries.isSelected
         let btnAll = self.btnAll.isSelected
         
         if  btnMovie || btnAll {
-            if let item = presenter?.movies[indexPath.row] {
-                cell.paintCell(item: item)
+            if presenter?.filter == true {
+                 lastIndexMovies = (self.presenter?.filterDataMovies?.count)! - 1
+                if let item = presenter?.filterDataMovies?[indexPath.row]{
+                    cell.paintCell(item: item)
+                }
+            } else {
+                if let item = presenter?.movies[indexPath.row]{
+                    cell.paintCell(item: item)
+                }
             }
-            if indexPath.row == lastIndexMovie {
+            if indexPath.row == lastIndexMovie || indexPath.row == lastIndexMovies {
                 presenter?.page += 1
                 presenter?.loadPopularMovies()
             }
             
-        } else if btnSerie {
+        }
+
+        else if btnSerie {
             if let item = presenter?.series[indexPath.row] {
                 cell.paintCellSerie(item: item)
             }
@@ -173,8 +194,23 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
 }
 
 
+//MARK: - UISearchBarDelegate
+extension PopularMovieViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter?.filter = true
+        if btnAll.isSelected || btnMovies.isSelected {
+            presenter?.filterDataMovies = presenter?.movies
+            presenter!.filterDataMovies = searchText.isEmpty ? presenter!.movies : presenter!.filterDataMovies!.filter { $0.originalTitle!.uppercased().contains(searchText.uppercased()) }
+            print(searchText)
+        }
+        collectionPopularMovies.reloadData()
+    }
     
-    
-
-    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        print("cancel")
+        searchBar.text = ""
+        presenter?.filter = false
+        collectionPopularMovies.reloadData()
+    }
+}
 

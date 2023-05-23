@@ -16,6 +16,7 @@
                 <outlet property="btnSeries" destination="td0-s4-FYU" id="dUq-YC-ogt"/>
                 <outlet property="collectionPopularMovies" destination="mq1-8v-jka" id="Paq-u4-bQR"/>
                 <outlet property="lblTitleController" destination="gaQ-KS-0sm" id="EE4-JO-nqy"/>
+                <outlet property="searchMedia" destination="gLF-r8-TgC" id="Tel-BK-j6O"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewButtons" destination="Hvp-AB-lRg" id="UA1-Uf-lSs"/>
                 <outlet property="viewController" destination="pHa-rl-YTJ" id="LFj-Ll-2vY"/>
