@@ -27,6 +27,7 @@ class PopularMovieViewController: UIViewController {
     
     //MARK: - Variables
     var presenter: PopularMoviePresenter?
+    var time: Timer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class PopularMovieViewController: UIViewController {
         styles()
         setUpCollection()
         searchMedia.showsCancelButton = true
+        searchMedia.delegate = self
     }
     
     //MARK: - setUpCollection
@@ -123,7 +125,8 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         
         if btnMovie || btnAll {
             guard let items =  presenter?.movies.count else { return 0 }
-            return items
+            guard let items1 =  presenter?.searchMovies.count else { return 0 }
+            return presenter!.filter ? items1 : items
         } else if btnSerie {
             guard let items = presenter?.series.count else { return 0 }
             return items
@@ -143,16 +146,20 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         //Ultimo indice para sumar uno a page en el presenter y cargar mas peliculas o series
         let lastIndexMovie = (self.presenter?.movies.count)! - 1
         let lastIndexSerie = (self.presenter?.series.count)! - 1
-       
+        var page: Int = 1
         
         let btnMovie = self.btnMovies.isSelected
         let btnSerie = self.btnSeries.isSelected
         let btnAll = self.btnAll.isSelected
         
-        if presenter?.filter == true{
-            if let item = presenter?.searchMovies[indexPath.row] {
-                cell.paintCell(item: item)
-            }
+        if presenter?.filter == true {
+                if let item = presenter?.searchMovies[indexPath.row] {
+                    cell.paintCell(item: item)
+                }
+                if indexPath.row == lastIndexMovie {
+                    page += 1
+                    presenter?.loadSearchMovies(searchText: nil, page: page )
+                }
         }
         
       else  if  btnMovie || btnAll {
@@ -192,10 +199,19 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
 //MARK: - UISearchBarDelegate
 extension PopularMovieViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.count >= 3 {
+        time?.invalidate()
+        if searchText.count == 3 && presenter?.searchMovies.count == 0 {
             presenter?.filter = true
-            presenter?.loadSearchMovies(searchText: searchText)
-            
+            presenter?.loadSearchMovies(searchText: searchText, page: 1)
+        } else if searchText.count > 3 {
+            time = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { [self] _ in
+                print("YA")
+                self.presenter?.searchMovies.removeAll()
+                self.presenter?.loadSearchMovies(searchText: searchText, page: 1)
+            })
+        } else if searchText == "" {
+            presenter?.filter = false
+            presenter?.loadPopularMovies()
         }
     }
     

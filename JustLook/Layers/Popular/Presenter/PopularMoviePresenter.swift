@@ -65,8 +65,8 @@ extension PopularMoviePresenter: PopularMoviePresenterInteractor {
         }
     }
     
-    func loadSearchMovies(searchText: String?) {
-        popularMovieInteractor.getPopularMovies(url: Util.Services.searchMovie.shapeURL(page: 1, searchText: searchText), type: PopularMovieDTO.self) { [weak self] data in
+    func loadSearchMovies(searchText: String?, page: Int) {
+        popularMovieInteractor.getPopularMovies(url: Util.Services.searchMovie.shapeURL(page: page, searchText: searchText), type: PopularMovieDTO.self) { [weak self] data in
             guard let wSelf = self else { return }
             switch data {
             case .success(let response):
