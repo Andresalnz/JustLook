@@ -23,8 +23,9 @@ final class Util {
     enum Services {
         case popularMovie
         case popularSerie
+        case searchMovie
         
-        func shapeURL(page: Int) ->URL? {
+        func shapeURL(page: Int, searchText: String?) ->URL? {
             let apiKey = Util.getApiKey()!
             let uri = Constants.TMDuri
             switch self {
@@ -33,6 +34,11 @@ final class Util {
                 return URL(string: "\(uri)movie/popular?api_key=\(String(describing: apiKey))&language=en-US&page=\(page)")
             case .popularSerie:
                 return URL(string: "\(uri)tv/popular?api_key=\(String(describing: apiKey))&language=en-US&page=\(page)")
+            case .searchMovie:
+                if let searchText = searchText {
+                    return URL(string: "\(uri)search/movie?api_key=\(String(describing: apiKey))&query=\(searchText)")
+                }
+                return URL(string: "\(uri)search/movie?api_key=\(String(describing: apiKey))query=")
             }
         }
     }
