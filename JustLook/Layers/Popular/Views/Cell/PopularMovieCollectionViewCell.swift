@@ -22,6 +22,11 @@ class PopularMovieCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         styles()
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        lblNote.text = nil
+        lblNote.textColor = .black
+    }
     
     func styles() {
         lblNote.textColor = .black
@@ -45,6 +50,23 @@ class PopularMovieCollectionViewCell: UICollectionViewCell {
         imgMovie.kf.setImage(with: image)
         imgIconImdb.image = UIImage(named: "icon-imdb")
         lblNote.text = String(format: "%.1f", item.voteAverage!)
+        
+    }
+    
+    func paintCellSearch(item: ResultSearchBO) {
+        guard let buildImage = Constants.buildImage else { return }
+        guard let posterPath = item.posterPath else { return }
+        let image = URL(string: ("\(buildImage)\(posterPath)"))
+        imgMovie.kf.setImage(with: image)
+        imgIconImdb.image = UIImage(named: "icon-imdb")
+        lblNote.text = String(format: "%.1f", item.voteAverage!)
+        if item.mediaType == MediaType.tv {
+            lblNote.textColor = .purple
+        }
+        if item.mediaType == MediaType.person {
+            lblNote.text = item.name
+            
+        }
         
     }
 

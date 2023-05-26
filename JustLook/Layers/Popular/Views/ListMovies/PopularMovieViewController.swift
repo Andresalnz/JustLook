@@ -125,7 +125,7 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         
         if btnMovie || btnAll {
             guard let items =  presenter?.movies.count else { return 0 }
-            guard let items1 =  presenter?.searchMovies.count else { return 0 }
+            guard let items1 =  presenter?.searchAll.count else { return 0 }
             return presenter!.filter ? items1 : items
         } else if btnSerie {
             guard let items = presenter?.series.count else { return 0 }
@@ -152,15 +152,15 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         let btnSerie = self.btnSeries.isSelected
         let btnAll = self.btnAll.isSelected
         
-        if presenter?.filter == true {
-                if let item = presenter?.searchMovies[indexPath.row] {
-                    cell.paintCell(item: item)
+        if presenter?.filter == true && (presenter?.searchAll.count)! > 0 {
+                if let item = presenter?.searchAll[indexPath.row] {
+                    cell.paintCellSearch(item: item)
                 }
                 if indexPath.row == lastIndexMovie {
                     page += 1
                     presenter?.loadSearchMovies(searchText: nil, page: page )
                 }
-        }
+        } 
         
       else  if  btnMovie || btnAll {
             if let item = presenter?.movies[indexPath.row] {
@@ -200,17 +200,18 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
 extension PopularMovieViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         time?.invalidate()
-        if searchText.count == 3 && presenter?.searchMovies.count == 0 {
+        if searchText.count == 3 && presenter?.searchAll.count == 0 {
             presenter?.filter = true
             presenter?.loadSearchMovies(searchText: searchText, page: 1)
         } else if searchText.count > 3 {
             time = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { [self] _ in
                 print("YA")
-                self.presenter?.searchMovies.removeAll()
+                self.presenter?.searchAll.removeAll()
                 self.presenter?.loadSearchMovies(searchText: searchText, page: 1)
             })
         } else if searchText == "" {
             presenter?.filter = false
+            self.presenter?.searchAll.removeAll()
             presenter?.loadPopularMovies()
         }
     }

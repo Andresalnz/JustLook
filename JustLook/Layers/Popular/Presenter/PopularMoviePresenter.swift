@@ -12,7 +12,7 @@ final class PopularMoviePresenter {
     let popularMovieInteractor: PopularMovieInteractor
     var movies: [ResultMovieBO] = []
     var series: [ResultSerieBO] = []
-    var searchMovies: [ResultMovieBO] = []
+    var searchAll: [ResultSearchBO] = []
     var page: Int = 1
     var filter: Bool = false
     
@@ -66,14 +66,14 @@ extension PopularMoviePresenter: PopularMoviePresenterInteractor {
     }
     
     func loadSearchMovies(searchText: String?, page: Int) {
-        popularMovieInteractor.getPopularMovies(url: Util.Services.searchMovie.shapeURL(page: page, searchText: searchText), type: PopularMovieDTO.self) { [weak self] data in
+        popularMovieInteractor.getPopularMovies(url: Util.Services.searchAll.shapeURL(page: page, searchText: searchText), type: SearchDTO.self) { [weak self] data in
             guard let wSelf = self else { return }
             switch data {
             case .success(let response):
                 if let searchMovies = response.results {
-                    searchMovies.forEach { movie in
-                        guard let movie = movie.toBO() else { return }
-                        wSelf.searchMovies.append(movie)
+                    searchMovies.forEach { media in
+                        guard let media = media.toBo() else { return }
+                        wSelf.searchAll.append(media)
                     }
                     wSelf.ui?.update()
                 }
