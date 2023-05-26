@@ -21,5 +21,5 @@ protocol PopularMoviewUIPresenter: AnyObject {
 protocol PopularMoviePresenterInteractor: AnyObject {
     func loadPopularMovies()
     func loadPopularSeries()
-    func loadSearchMovies(searchText: String?, page: Int)
+    func loadSearchMovies(searchText: String?)
 }

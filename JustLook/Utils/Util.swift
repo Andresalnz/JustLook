@@ -11,7 +11,7 @@ import Foundation
 final class Util {
     
     //MARK: - Obtener apikey de info.plist
-    static func getApiKey() -> String? {
+    static func getApiKey() -> String {
         let apiKey = Bundle.main.object(forInfoDictionaryKey: "API_KEY") as? String
         guard let key = apiKey else {
             return "No existe"
@@ -26,19 +26,19 @@ final class Util {
         case searchAll
         
         func shapeURL(page: Int, searchText: String?) ->URL? {
-            let apiKey = Util.getApiKey()!
+            let apiKey = Constants.apiKeyURL
             let uri = Constants.TMDuri
             switch self {
             case .popularMovie:
                 //TODO: Poner lenguage y paginacion
-                return URL(string: "\(uri)movie/popular?api_key=\(String(describing: apiKey))&language=en-US&page=\(page)")
+                return URL(string: "\(uri)\(Constants.moviePopular)\(apiKey)\(Constants.languagePage)\(page)")
             case .popularSerie:
-                return URL(string: "\(uri)tv/popular?api_key=\(String(describing: apiKey))&language=en-US&page=\(page)")
+                return URL(string: "\(uri)\(Constants.tvPopular)\(apiKey)\(Constants.languagePage)\(page)")
             case .searchAll:
                 if let searchText = searchText {
-                    return URL(string: "\(uri)search/multi?api_key=\(String(describing: apiKey))&query=\(searchText)")
+                    return URL(string: "\(uri)\(Constants.searchMulti)\(apiKey)\(Constants.query)\(searchText)")
                 }
-                return URL(string: "\(uri)search/movie?api_key=\(String(describing: apiKey))query=")
+                return URL(string: "\(uri)\(Constants.moviePopular)\(apiKey)\(Constants.languagePage)\(page)")
             }
         }
     }

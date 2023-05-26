@@ -10,29 +10,33 @@ import Kingfisher
 
 class PopularMovieCollectionViewCell: UICollectionViewCell {
     
-    
+    //MARK: - IbOutlet
     @IBOutlet weak var imgMovie: UIImageView!
     @IBOutlet weak var imgIconImdb: UIImageView!
     @IBOutlet weak var lblNote: UILabel!
     
-    
+    //MARK: - Variables
     static let identifier: String = "PopularCell"
 
+    //MARK: - Default Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         styles()
     }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         lblNote.text = nil
         lblNote.textColor = .black
     }
     
+    //MARK: - Styles
     func styles() {
         lblNote.textColor = .black
        
     }
     
+    //MARK: - Methods Paint Cell
     func paintCell(item: ResultMovieBO) {
         guard let buildImage = Constants.buildImage else { return }
         guard let posterPath = item.posterPath else { return }

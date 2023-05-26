@@ -8,29 +8,34 @@
 import Foundation
 
 final class PopularMoviePresenter {
+    //MARK: - Layers
     weak var ui: PopularMovieUI?
     let popularMovieInteractor: PopularMovieInteractor
+    
+    //MARK: - Variables
     var movies: [ResultMovieBO] = []
     var series: [ResultSerieBO] = []
     var searchAll: [ResultSearchBO] = []
     var page: Int = 1
-    var filter: Bool = false
     
+    //MARK: - Init
     init(popularMovieInteractor: PopularMovieInteractor) {
         self.popularMovieInteractor = popularMovieInteractor
     }
 }
 
+//MARK: - PopularMoviewUIPresenter
 extension PopularMoviePresenter: PopularMoviewUIPresenter {
     func viewDidLoad() {
         loadPopularMovies()
     }
 }
 
+//MARK: - PopularMoviePresenterInteractor
 extension PopularMoviePresenter: PopularMoviePresenterInteractor {
     
     func loadPopularMovies() {
-        popularMovieInteractor.getPopularMovies(url: Util.Services.popularMovie.shapeURL(page: page, searchText: nil), type: PopularMovieDTO.self) { [weak self] data in
+        popularMovieInteractor.getPopularAndSearch(url: Util.Services.popularMovie.shapeURL(page: page, searchText: nil), type: PopularMovieDTO.self) { [weak self] data in
             guard let wSelf = self else {return }
             switch data {
             case .success(let response):
@@ -48,7 +53,7 @@ extension PopularMoviePresenter: PopularMoviePresenterInteractor {
     }
     
     func loadPopularSeries() {
-        popularMovieInteractor.getPopularMovies(url: Util.Services.popularSerie.shapeURL(page: page, searchText: nil), type: PopularSerieDTO.self) { [weak self] data in
+        popularMovieInteractor.getPopularAndSearch(url: Util.Services.popularSerie.shapeURL(page: page, searchText: nil), type: PopularSerieDTO.self) { [weak self] data in
             guard let wSelf = self else { return  }
             switch data {
             case .success(let response):
@@ -65,8 +70,8 @@ extension PopularMoviePresenter: PopularMoviePresenterInteractor {
         }
     }
     
-    func loadSearchMovies(searchText: String?, page: Int) {
-        popularMovieInteractor.getPopularMovies(url: Util.Services.searchAll.shapeURL(page: page, searchText: searchText), type: SearchDTO.self) { [weak self] data in
+    func loadSearchMovies(searchText: String?) {
+        popularMovieInteractor.getPopularAndSearch(url: Util.Services.searchAll.shapeURL(page: page, searchText: searchText), type: SearchDTO.self) { [weak self] data in
             guard let wSelf = self else { return }
             switch data {
             case .success(let response):
