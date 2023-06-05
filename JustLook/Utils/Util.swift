@@ -24,21 +24,29 @@ final class Util {
         case popularMovie
         case popularSerie
         case searchAll
+        case DetailMovie
         
-        func shapeURL(page: Int, searchText: String?) ->URL? {
+        func shapeURL(page: Int? = nil, searchText: String? = nil, id: Int? = nil) -> URL? {
             let apiKey = Constants.apiKeyURL
             let uri = Constants.TMDuri
             switch self {
             case .popularMovie:
+                guard let page = page else { return nil }
                 //TODO: Poner lenguage y paginacion
                 return URL(string: "\(uri)\(Constants.moviePopular)\(apiKey)\(Constants.languagePage)\(page)")
             case .popularSerie:
+                guard let page = page else { return nil }
                 return URL(string: "\(uri)\(Constants.tvPopular)\(apiKey)\(Constants.languagePage)\(page)")
             case .searchAll:
+                guard let page = page else { return nil }
                 if let searchText = searchText {
                     return URL(string: "\(uri)\(Constants.searchMulti)\(apiKey)\(Constants.query)\(searchText)")
                 }
                 return URL(string: "\(uri)\(Constants.moviePopular)\(apiKey)\(Constants.languagePage)\(page)")
+                    
+                case .DetailMovie:
+                    guard let id = id else { return URL(string: "") }
+                    return URL(string: "\(uri)\(Constants.movie)\(id)\(apiKey)")
             }
         }
     }

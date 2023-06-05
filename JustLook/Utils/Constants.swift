@@ -22,4 +22,5 @@ struct Constants {
     static let searchMulti: String = "search/multi"
     static let query = "&query="
     static let languagePage: String = "&language=en-US&page="
+    static let movie: String = "movie"
 }
