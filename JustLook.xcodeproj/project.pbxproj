@@ -35,6 +35,11 @@
 		9F69F8A029F936BF00444ED0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F69F89F29F936BF00444ED0 /* Protocols.swift */; };
 		9FF4A78429FBE36A00966630 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78329FBE36A00966630 /* Constants.swift */; };
 		9FF4A78F29FC3C9E00966630 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78E29FC3C9E00966630 /* Util.swift */; };
+		9FF70CF82A265B3F002083CC /* DetailMovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70CF72A265B3F002083CC /* DetailMovieDTO.swift */; };
+		9FF70CFB2A266569002083CC /* DetailMovieBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70CFA2A266569002083CC /* DetailMovieBO.swift */; };
+		9FF70CFD2A2755A9002083CC /* DetailMovieMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70CFC2A2755A9002083CC /* DetailMovieMapper.swift */; };
+		9FF70D022A27699D002083CC /* DetailMovieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70D012A27699D002083CC /* DetailMovieInteractor.swift */; };
+		9FF70D042A2896A1002083CC /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70D032A2896A1002083CC /* Protocols.swift */; };
 		9FFB58612A08F1C70011BDED /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB58602A08F1C70011BDED /* UILabel+Extension.swift */; };
 		9FFB58632A08F57A0011BDED /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB58622A08F57A0011BDED /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -89,6 +94,11 @@
 		9FF4A78329FBE36A00966630 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9FF4A78D29FC3A3200966630 /* privateConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = privateConfig.xcconfig; sourceTree = "<group>"; };
 		9FF4A78E29FC3C9E00966630 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		9FF70CF72A265B3F002083CC /* DetailMovieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieDTO.swift; sourceTree = "<group>"; };
+		9FF70CFA2A266569002083CC /* DetailMovieBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieBO.swift; sourceTree = "<group>"; };
+		9FF70CFC2A2755A9002083CC /* DetailMovieMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieMapper.swift; sourceTree = "<group>"; };
+		9FF70D012A27699D002083CC /* DetailMovieInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieInteractor.swift; sourceTree = "<group>"; };
+		9FF70D032A2896A1002083CC /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		9FFB58602A08F1C70011BDED /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		9FFB58622A08F57A0011BDED /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +204,7 @@
 		9F113BFE29F6CBB00017101D /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				9FF70CEE2A264FDD002083CC /* Detail */,
 				9F113C0429F6CEA20017101D /* Popular */,
 				9F69F89F29F936BF00444ED0 /* Protocols.swift */,
 			);
@@ -391,6 +402,90 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		9FF70CEE2A264FDD002083CC /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9FF70CF32A26500D002083CC /* Model */,
+				9FF70CF22A265004002083CC /* Interactor */,
+				9FF70CF12A264FF9002083CC /* Presenter */,
+				9FF70CF02A264FF0002083CC /* Views */,
+				9FF70CEF2A264FE7002083CC /* Router */,
+				9FF70D032A2896A1002083CC /* Protocols.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		9FF70CEF2A264FE7002083CC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9FF70CF02A264FF0002083CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9FF70CF12A264FF9002083CC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9FF70CF22A265004002083CC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9FF70D012A27699D002083CC /* DetailMovieInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9FF70CF32A26500D002083CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FF70CF92A266202002083CC /* DetailMovie */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FF70CF42A265B09002083CC /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				9FF70CF72A265B3F002083CC /* DetailMovieDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		9FF70CF52A265B12002083CC /* BO */ = {
+			isa = PBXGroup;
+			children = (
+				9FF70CFA2A266569002083CC /* DetailMovieBO.swift */,
+			);
+			path = BO;
+			sourceTree = "<group>";
+		};
+		9FF70CF62A265B19002083CC /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9FF70CFC2A2755A9002083CC /* DetailMovieMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		9FF70CF92A266202002083CC /* DetailMovie */ = {
+			isa = PBXGroup;
+			children = (
+				9FF70CF42A265B09002083CC /* DTO */,
+				9FF70CF52A265B12002083CC /* BO */,
+				9FF70CF62A265B19002083CC /* Mapper */,
+			);
+			path = DetailMovie;
+			sourceTree = "<group>";
+		};
 		9FFB585F2A08F1A10011BDED /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,10 +634,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF70D022A27699D002083CC /* DetailMovieInteractor.swift in Sources */,
 				9F3BD7A229F84FE5009791B6 /* PopularMovieViewController.swift in Sources */,
 				9F3BD79329F7CE09009791B6 /* PopularMovieBO.swift in Sources */,
+				9FF70CFD2A2755A9002083CC /* DetailMovieMapper.swift in Sources */,
 				9F3BD79E29F80B2C009791B6 /* PopularMoviePresenter.swift in Sources */,
 				9F69F8A029F936BF00444ED0 /* Protocols.swift in Sources */,
+				9FF70CF82A265B3F002083CC /* DetailMovieDTO.swift in Sources */,
 				9F3BD79C29F7F529009791B6 /* PopularMovieInteractor.swift in Sources */,
 				9F3F74A72A0249E500F136CC /* PopularSerieMapper.swift in Sources */,
 				9F113BD429F6CA9F0017101D /* JustLook.xcdatamodeld in Sources */,
@@ -551,12 +649,14 @@
 				9FF4A78F29FC3C9E00966630 /* Util.swift in Sources */,
 				9F113BCA29F6CA9F0017101D /* AppDelegate.swift in Sources */,
 				9F3F74982A00FEBC00F136CC /* PopularMovieCollectionViewCell.swift in Sources */,
+				9FF70CFB2A266569002083CC /* DetailMovieBO.swift in Sources */,
 				9F3BD7A529F85E2D009791B6 /* PopularMovieRouter.swift in Sources */,
 				9FFB58632A08F57A0011BDED /* UIButton+Extension.swift in Sources */,
 				9F3F74A52A02486300F136CC /* PopularSerieBO.swift in Sources */,
 				9F3A5FA32A1F5A6A00926953 /* SearchDTO.swift in Sources */,
 				9F113BCC29F6CA9F0017101D /* SceneDelegate.swift in Sources */,
 				9F3A5FA52A1F5B6400926953 /* SearchBO.swift in Sources */,
+				9FF70D042A2896A1002083CC /* Protocols.swift in Sources */,
 				9F3F74A32A02458500F136CC /* PopularSerieDTO.swift in Sources */,
 				9F3BD79529F7E333009791B6 /* PopularMovieMapper.swift in Sources */,
 				9F3A5FA72A1F5F9300926953 /* SearchMapper.swift in Sources */,
