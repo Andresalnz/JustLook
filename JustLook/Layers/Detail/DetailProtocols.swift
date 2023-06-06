@@ -7,3 +7,6 @@
 
 import Foundation
 
+protocol DetailInteractor: AnyObject {
+    func getDetailMovieOrSerie<T:Codable>(url: URL?, type: T.Type, completion: @escaping (Result<T, Error>) -> Void)
+}
