@@ -8,13 +8,13 @@
 import Foundation
 
 //Protocolo del Interactor
-protocol DetailInteractor: AnyObject {
+protocol DetailInteractorProtocol: AnyObject {
     func getDetailMovieOrSerie<T:Codable>(url: URL?, type: T.Type, completion: @escaping (Result<T, Error>) -> Void)
 }
 
 protocol DetailPresentable: AnyObject {
     var ui: DetailUI? { get }
-    var detailInteractor: DetailInteractor { get }
+    var detailInteractor: DetailInteractorProtocol { get }
     var id: Int? { get }
     var detailMovie: DetailMovieBO? { get }
 }

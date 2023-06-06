@@ -9,11 +9,11 @@ import Foundation
 
 final class DetailPresenter: DetailPresentable {
     weak var ui: DetailUI?
-    let detailInteractor: DetailInteractor
+    let detailInteractor: DetailInteractorProtocol
     let id: Int?
     var detailMovie: DetailMovieBO?
     
-    init(id: Int?, detailInteractor: DetailInteractor) {
+    init(id: Int?, detailInteractor: DetailInteractorProtocol) {
         self.detailInteractor = detailInteractor
         self.id = id
     }

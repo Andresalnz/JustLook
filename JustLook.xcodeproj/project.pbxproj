@@ -39,7 +39,7 @@
 		9FF70CF82A265B3F002083CC /* DetailMovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70CF72A265B3F002083CC /* DetailMovieDTO.swift */; };
 		9FF70CFB2A266569002083CC /* DetailMovieBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70CFA2A266569002083CC /* DetailMovieBO.swift */; };
 		9FF70CFD2A2755A9002083CC /* DetailMovieMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70CFC2A2755A9002083CC /* DetailMovieMapper.swift */; };
-		9FF70D022A27699D002083CC /* DetailMovieInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70D012A27699D002083CC /* DetailMovieInteractor.swift */; };
+		9FF70D022A27699D002083CC /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70D012A27699D002083CC /* DetailInteractor.swift */; };
 		9FF70D042A2896A1002083CC /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70D032A2896A1002083CC /* DetailProtocols.swift */; };
 		9FFB58612A08F1C70011BDED /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB58602A08F1C70011BDED /* UILabel+Extension.swift */; };
 		9FFB58632A08F57A0011BDED /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFB58622A08F57A0011BDED /* UIButton+Extension.swift */; };
@@ -99,7 +99,7 @@
 		9FF70CF72A265B3F002083CC /* DetailMovieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieDTO.swift; sourceTree = "<group>"; };
 		9FF70CFA2A266569002083CC /* DetailMovieBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieBO.swift; sourceTree = "<group>"; };
 		9FF70CFC2A2755A9002083CC /* DetailMovieMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieMapper.swift; sourceTree = "<group>"; };
-		9FF70D012A27699D002083CC /* DetailMovieInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieInteractor.swift; sourceTree = "<group>"; };
+		9FF70D012A27699D002083CC /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		9FF70D032A2896A1002083CC /* DetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
 		9FFB58602A08F1C70011BDED /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		9FFB58622A08F57A0011BDED /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -442,7 +442,7 @@
 		9FF70CF22A265004002083CC /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				9FF70D012A27699D002083CC /* DetailMovieInteractor.swift */,
+				9FF70D012A27699D002083CC /* DetailInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -637,7 +637,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FF70D022A27699D002083CC /* DetailMovieInteractor.swift in Sources */,
+				9FF70D022A27699D002083CC /* DetailInteractor.swift in Sources */,
 				9F3BD7A229F84FE5009791B6 /* PopularMovieViewController.swift in Sources */,
 				9F3BD79329F7CE09009791B6 /* PopularMovieBO.swift in Sources */,
 				9FF70CFD2A2755A9002083CC /* DetailMovieMapper.swift in Sources */,

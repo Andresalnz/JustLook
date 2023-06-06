@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class DetailMovieInteractor: DetailInteractor {
+class DetailInteractor: DetailInteractorProtocol {
     func getDetailMovieOrSerie<T:Codable>(url: URL?, type: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
         guard let url = url else {
             completion(.failure((NSError(domain: "url mal", code: -1, userInfo: nil))))
