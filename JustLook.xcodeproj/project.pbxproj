@@ -15,6 +15,7 @@
 		9F113BEE29F6CAA00017101D /* JustLookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F113BED29F6CAA00017101D /* JustLookUITests.swift */; };
 		9F113BF029F6CAA00017101D /* JustLookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F113BEF29F6CAA00017101D /* JustLookUITestsLaunchTests.swift */; };
 		9F113C0B29F6EB620017101D /* PopularMovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F113C0A29F6EB620017101D /* PopularMovieDTO.swift */; };
+		9F3094A02A2F3E9300F645AE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30949F2A2F3E9300F645AE /* DetailPresenter.swift */; };
 		9F3A5FA32A1F5A6A00926953 /* SearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A5FA22A1F5A6A00926953 /* SearchDTO.swift */; };
 		9F3A5FA52A1F5B6400926953 /* SearchBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A5FA42A1F5B6400926953 /* SearchBO.swift */; };
 		9F3A5FA72A1F5F9300926953 /* SearchMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A5FA62A1F5F9300926953 /* SearchMapper.swift */; };
@@ -74,6 +75,7 @@
 		9F113BED29F6CAA00017101D /* JustLookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustLookUITests.swift; sourceTree = "<group>"; };
 		9F113BEF29F6CAA00017101D /* JustLookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustLookUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9F113C0A29F6EB620017101D /* PopularMovieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieDTO.swift; sourceTree = "<group>"; };
+		9F30949F2A2F3E9300F645AE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		9F3A5FA22A1F5A6A00926953 /* SearchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDTO.swift; sourceTree = "<group>"; };
 		9F3A5FA42A1F5B6400926953 /* SearchBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBO.swift; sourceTree = "<group>"; };
 		9F3A5FA62A1F5F9300926953 /* SearchMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapper.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 		9FF70CF12A264FF9002083CC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				9F30949F2A2F3E9300F645AE /* DetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -653,6 +656,7 @@
 				9F3BD7A529F85E2D009791B6 /* PopularMovieRouter.swift in Sources */,
 				9FFB58632A08F57A0011BDED /* UIButton+Extension.swift in Sources */,
 				9F3F74A52A02486300F136CC /* PopularSerieBO.swift in Sources */,
+				9F3094A02A2F3E9300F645AE /* DetailPresenter.swift in Sources */,
 				9F3A5FA32A1F5A6A00926953 /* SearchDTO.swift in Sources */,
 				9F113BCC29F6CA9F0017101D /* SceneDelegate.swift in Sources */,
 				9F3A5FA52A1F5B6400926953 /* SearchBO.swift in Sources */,
