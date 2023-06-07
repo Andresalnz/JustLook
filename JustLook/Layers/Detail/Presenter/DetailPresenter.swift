@@ -8,6 +8,7 @@
 import Foundation
 
 final class DetailPresenter: DetailPresentable {
+//MARK: - Variables
     weak var ui: DetailUI?
     let detailInteractor: DetailInteractorProtocol
     let id: Int?
