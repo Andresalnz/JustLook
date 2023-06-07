@@ -11,7 +11,7 @@ final class PopularMoviePresenter {
     //MARK: - Layers
     weak var ui: PopularMovieUI?
     let popularMovieInteractor: PopularMovieInteractor
-    
+    let router: PopularRouting
     //MARK: - Variables
     var movies: [ResultMovieBO] = []
     var series: [ResultSerieBO] = []
@@ -19,8 +19,9 @@ final class PopularMoviePresenter {
     var page: Int = 1
     
     //MARK: - Init
-    init(popularMovieInteractor: PopularMovieInteractor) {
+    init(popularMovieInteractor: PopularMovieInteractor, router: PopularRouting) {
         self.popularMovieInteractor = popularMovieInteractor
+        self.router = router
     }
 }
 
