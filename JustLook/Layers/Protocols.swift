@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 //Protocolo para conectar Presenter con Vista
 protocol PopularMovieUI: AnyObject {
     func update()
@@ -22,4 +22,11 @@ protocol PopularMoviePresenterInteractor: AnyObject {
     func loadPopularMovies()
     func loadPopularSeries()
     func loadSearchMovies(searchText: String?)
+}
+
+protocol PopularRouting: AnyObject {
+    var detalRouting: DetailRouting? { get }
+    var popularView: PopularMovieViewController? { get }
+    func showPopularMoview(window: UIWindow?)
+    func showDetailM(id: Int)
 }

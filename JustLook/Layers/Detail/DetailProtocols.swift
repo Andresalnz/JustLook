@@ -6,17 +6,23 @@
 //
 
 import Foundation
-
+import UIKit
 //Protocolo del Interactor
 protocol DetailInteractorProtocol: AnyObject {
     func getDetailMovieOrSerie<T:Codable>(url: URL?, type: T.Type, completion: @escaping (Result<T, Error>) -> Void)
 }
 
+//Protocolo del presenter
 protocol DetailPresentable: AnyObject {
     var ui: DetailUI? { get }
     var detailInteractor: DetailInteractorProtocol { get }
     var id: Int? { get }
     var detailMovie: DetailMovieBO? { get }
+}
+
+//Protocolo Router
+protocol DetailRouting: AnyObject {
+    func showDetail(fromViewController: UIViewController ,id: Int)
 }
 
 //Protocolo presenter - Interactor
@@ -29,9 +35,3 @@ protocol DetailUI: AnyObject {
     func update(detailMovie: DetailMovieBO? )
 }
 
-//Extenison para colocar parametros por defectos
-extension DetailUI {
-    func update (detailMovie: DetailMovieBO? = nil ) {
-        update(detailMovie: detailMovie)
-    }
-}

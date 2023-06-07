@@ -18,6 +18,7 @@
 		9F3094A02A2F3E9300F645AE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30949F2A2F3E9300F645AE /* DetailPresenter.swift */; };
 		9F3094A32A2F52DE00F645AE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3094A12A2F52DE00F645AE /* DetailViewController.swift */; };
 		9F3094A42A2F52DE00F645AE /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3094A22A2F52DE00F645AE /* DetailViewController.xib */; };
+		9F3094A62A2F57EE00F645AE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3094A52A2F57EE00F645AE /* DetailRouter.swift */; };
 		9F3A5FA32A1F5A6A00926953 /* SearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A5FA22A1F5A6A00926953 /* SearchDTO.swift */; };
 		9F3A5FA52A1F5B6400926953 /* SearchBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A5FA42A1F5B6400926953 /* SearchBO.swift */; };
 		9F3A5FA72A1F5F9300926953 /* SearchMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A5FA62A1F5F9300926953 /* SearchMapper.swift */; };
@@ -80,6 +81,7 @@
 		9F30949F2A2F3E9300F645AE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		9F3094A12A2F52DE00F645AE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9F3094A22A2F52DE00F645AE /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		9F3094A52A2F57EE00F645AE /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		9F3A5FA22A1F5A6A00926953 /* SearchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDTO.swift; sourceTree = "<group>"; };
 		9F3A5FA42A1F5B6400926953 /* SearchBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBO.swift; sourceTree = "<group>"; };
 		9F3A5FA62A1F5F9300926953 /* SearchMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapper.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 		9FF70CEF2A264FE7002083CC /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				9F3094A52A2F57EE00F645AE /* DetailRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -659,6 +662,7 @@
 				9FFB58612A08F1C70011BDED /* UILabel+Extension.swift in Sources */,
 				9FF4A78F29FC3C9E00966630 /* Util.swift in Sources */,
 				9F113BCA29F6CA9F0017101D /* AppDelegate.swift in Sources */,
+				9F3094A62A2F57EE00F645AE /* DetailRouter.swift in Sources */,
 				9F3F74982A00FEBC00F136CC /* PopularMovieCollectionViewCell.swift in Sources */,
 				9FF70CFB2A266569002083CC /* DetailMovieBO.swift in Sources */,
 				9F3BD7A529F85E2D009791B6 /* PopularMovieRouter.swift in Sources */,
