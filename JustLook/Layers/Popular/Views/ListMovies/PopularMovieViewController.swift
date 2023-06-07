@@ -205,7 +205,6 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
     }
 }
 
-
 //MARK: - UISearchBarDelegate
 extension PopularMovieViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
