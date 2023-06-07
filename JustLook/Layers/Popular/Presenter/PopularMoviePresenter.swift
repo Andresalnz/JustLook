@@ -30,6 +30,11 @@ extension PopularMoviePresenter: PopularMoviewUIPresenter {
     func viewDidLoad() {
         loadPopularMovies()
     }
+    
+    func onTapCell(atIndex: Int) {
+        guard let id = movies[atIndex].id else { return }
+        router.showDetailM(id: id)
+    }
 }
 
 //MARK: - PopularMoviePresenterInteractor

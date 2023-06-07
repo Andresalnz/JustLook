@@ -199,6 +199,10 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize (width: 180, height: 280)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.onTapCell(atIndex: indexPath.row)
+    }
 }
 
 
