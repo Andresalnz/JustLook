@@ -35,3 +35,6 @@ protocol DetailUI: AnyObject {
     func update(detailMovie: DetailMovieBO? )
 }
 
+protocol DetailUIPresenter: AnyObject {
+    func viewDidLoad()
+}

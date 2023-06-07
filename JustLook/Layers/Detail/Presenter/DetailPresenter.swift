@@ -37,3 +37,9 @@ extension DetailPresenter: DetailPresenterInteractor {
     }
   
 }
+
+extension DetailPresenter: DetailUIPresenter {
+    func viewDidLoad() {
+        print("loquesea")
+    }
+}

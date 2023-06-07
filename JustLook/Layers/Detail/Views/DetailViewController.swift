@@ -10,11 +10,11 @@ import UIKit
 class DetailViewController: UIViewController, DetailUI {
     
     //MARK: - Variables
-     var presenter: DetailPresenterInteractor?
+     var presenter: DetailUIPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter?.loadDetail()
+        presenter?.viewDidLoad()
     
     }
    
