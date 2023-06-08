@@ -16,7 +16,7 @@ class DetailRouter: DetailRouting {
         presenter.ui = view
         view.presenter = presenter
         
-        fromViewController.present(view, animated: true)
-   
+       // fromViewController.present(view, animated: true)
+        fromViewController.navigationController?.pushViewController(view, animated: true)
     }
 }

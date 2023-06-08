@@ -18,10 +18,6 @@ class PopularMovieViewController: UIViewController {
     @IBOutlet weak var btnSeries: UIButton!
     @IBOutlet weak var btnMovies: UIButton!
     
-    //Controller
-    @IBOutlet weak var viewController: UIView!
-    @IBOutlet weak var lblTitleController: UILabel!
-    
     //search
     @IBOutlet weak var searchMedia: UISearchBar!
     
@@ -58,8 +54,8 @@ class PopularMovieViewController: UIViewController {
         self.collectionPopularMovies.backgroundColor = .white
         
         //Controller
-        self.lblTitleController.generalLabel("Populares", .black, .boldSystemFont(ofSize: 20))
-       
+        //self.lblTitleController.generalLabel("Populares", .black, .boldSystemFont(ofSize: 20))
+        self.title = "Populares"
       
         //buttons
         self.btnAll.generalButton("Todo", tintColor: .black)
@@ -68,7 +64,7 @@ class PopularMovieViewController: UIViewController {
         
         //views
         self.viewButtons.backgroundColor = .white
-        self.viewController.backgroundColor = .white
+        
     }
     
     //MARK: - Actions

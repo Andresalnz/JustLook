@@ -11,6 +11,7 @@ import UIKit
 class PopularMovieRouter: PopularRouting {
     var detalRouting: DetailRouting?
     var popularView: PopularMovieViewController?
+    var navMain = UINavigationController()
     
     func showPopularMoview(window: UIWindow?) {
         self.detalRouting = DetailRouter()
@@ -21,7 +22,8 @@ class PopularMovieRouter: PopularRouting {
         presenter.ui = popularView
         popularView?.presenter = presenter
         
-        window?.rootViewController = popularView
+        window?.rootViewController = navMain
+        navMain.pushViewController(popularView!, animated: true)
         window?.makeKeyAndVisible()
         
 
