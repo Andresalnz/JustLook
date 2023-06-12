@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="JustLook" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="t0r-el-Q9g" id="Vqf-lU-2ly"/>
+                <outlet property="scrollViewDetail" destination="3ca-mW-4hX" id="PE4-zh-1Td"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +20,45 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJQ-sn-qdx">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ca-mW-4hX">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0r-el-Q9g">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="1059"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="t0r-el-Q9g" firstAttribute="width" secondItem="3ca-mW-4hX" secondAttribute="width" id="Td0-O0-miu"/>
+                                <constraint firstAttribute="trailing" secondItem="t0r-el-Q9g" secondAttribute="trailing" id="ba4-fw-wh2"/>
+                                <constraint firstAttribute="bottom" secondItem="t0r-el-Q9g" secondAttribute="bottom" id="hDk-8g-GER"/>
+                                <constraint firstItem="t0r-el-Q9g" firstAttribute="top" secondItem="3ca-mW-4hX" secondAttribute="top" id="yMv-TG-EHZ"/>
+                                <constraint firstItem="t0r-el-Q9g" firstAttribute="height" secondItem="3ca-mW-4hX" secondAttribute="height" priority="250" constant="300" id="z4b-Wt-7kw"/>
+                                <constraint firstItem="t0r-el-Q9g" firstAttribute="leading" secondItem="3ca-mW-4hX" secondAttribute="leading" id="zi8-tX-2Jv"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="3ca-mW-4hX" secondAttribute="trailing" id="3hC-w1-QNR"/>
+                        <constraint firstAttribute="bottom" secondItem="3ca-mW-4hX" secondAttribute="bottom" id="LeM-tS-qxZ"/>
+                        <constraint firstItem="3ca-mW-4hX" firstAttribute="leading" secondItem="rJQ-sn-qdx" secondAttribute="leading" id="Xhi-8f-83T"/>
+                        <constraint firstItem="3ca-mW-4hX" firstAttribute="top" secondItem="rJQ-sn-qdx" secondAttribute="top" id="wZ3-MD-V8p"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rJQ-sn-qdx" secondAttribute="trailing" id="2tI-3d-SRI"/>
+                <constraint firstItem="rJQ-sn-qdx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3ew-jj-t7a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rJQ-sn-qdx" secondAttribute="bottom" id="J4f-oz-Xjc"/>
+                <constraint firstItem="rJQ-sn-qdx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zCS-qH-gcQ"/>
+            </constraints>
             <point key="canvasLocation" x="56" y="-11"/>
         </view>
     </objects>
