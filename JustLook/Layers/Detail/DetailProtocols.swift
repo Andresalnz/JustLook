@@ -36,5 +36,6 @@ protocol DetailUI: AnyObject {
 }
 
 protocol DetailUIPresenter: AnyObject {
+    var detailMovie: DetailMovieBO? { get }
     func viewDidLoad()
 }
