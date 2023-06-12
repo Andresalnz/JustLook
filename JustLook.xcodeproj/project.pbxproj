@@ -41,6 +41,9 @@
 		9F9B76A82A3735B3002D78CC /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B76A42A3735B3002D78CC /* OpenSans-Light.ttf */; };
 		9F9B76A92A3735B3002D78CC /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B76A52A3735B3002D78CC /* OpenSans-Bold.ttf */; };
 		9F9B76AA2A3735B3002D78CC /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B76A62A3735B3002D78CC /* OpenSans-Regular.ttf */; };
+		9F9B76B02A377444002D78CC /* DetailCreditsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B76AF2A377444002D78CC /* DetailCreditsDTO.swift */; };
+		9F9B76B22A3778FB002D78CC /* DetailCreditsBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B76B12A3778FB002D78CC /* DetailCreditsBO.swift */; };
+		9F9B76B42A377AE8002D78CC /* DetailCreditsMapperBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B76B32A377AE8002D78CC /* DetailCreditsMapperBO.swift */; };
 		9FF4A78429FBE36A00966630 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78329FBE36A00966630 /* Constants.swift */; };
 		9FF4A78F29FC3C9E00966630 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78E29FC3C9E00966630 /* Util.swift */; };
 		9FF70CF82A265B3F002083CC /* DetailMovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70CF72A265B3F002083CC /* DetailMovieDTO.swift */; };
@@ -107,6 +110,9 @@
 		9F9B76A42A3735B3002D78CC /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "../../../../../../Downloads/Open_Sans/static/OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		9F9B76A52A3735B3002D78CC /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../../../../Downloads/Open_Sans/static/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		9F9B76A62A3735B3002D78CC /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../../../Downloads/Open_Sans/static/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		9F9B76AF2A377444002D78CC /* DetailCreditsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCreditsDTO.swift; sourceTree = "<group>"; };
+		9F9B76B12A3778FB002D78CC /* DetailCreditsBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCreditsBO.swift; sourceTree = "<group>"; };
+		9F9B76B32A377AE8002D78CC /* DetailCreditsMapperBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCreditsMapperBO.swift; sourceTree = "<group>"; };
 		9FF4A78329FBE36A00966630 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9FF4A78D29FC3A3200966630 /* privateConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = privateConfig.xcconfig; sourceTree = "<group>"; };
 		9FF4A78E29FC3C9E00966630 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -422,6 +428,40 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		9F9B76AB2A3773CE002D78CC /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B76AE2A3773E9002D78CC /* DTO */,
+				9F9B76AD2A3773E3002D78CC /* BO */,
+				9F9B76AC2A3773D7002D78CC /* Mapper */,
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		9F9B76AC2A3773D7002D78CC /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B76B32A377AE8002D78CC /* DetailCreditsMapperBO.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		9F9B76AD2A3773E3002D78CC /* BO */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B76B12A3778FB002D78CC /* DetailCreditsBO.swift */,
+			);
+			path = BO;
+			sourceTree = "<group>";
+		};
+		9F9B76AE2A3773E9002D78CC /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				9F9B76AF2A377444002D78CC /* DetailCreditsDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		9FF4A78C29FC39F300966630 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +519,7 @@
 		9FF70CF32A26500D002083CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F9B76AB2A3773CE002D78CC /* Credits */,
 				9FF70CF92A266202002083CC /* DetailMovie */,
 			);
 			path = Model;
@@ -673,11 +714,13 @@
 			files = (
 				9FF70D022A27699D002083CC /* DetailInteractor.swift in Sources */,
 				9F3BD7A229F84FE5009791B6 /* PopularMovieViewController.swift in Sources */,
+				9F9B76B22A3778FB002D78CC /* DetailCreditsBO.swift in Sources */,
 				9F3BD79329F7CE09009791B6 /* PopularMovieBO.swift in Sources */,
 				9FF70CFD2A2755A9002083CC /* DetailMovieMapper.swift in Sources */,
 				9F3BD79E29F80B2C009791B6 /* PopularMoviePresenter.swift in Sources */,
 				9F69F8A029F936BF00444ED0 /* Protocols.swift in Sources */,
 				9FF70CF82A265B3F002083CC /* DetailMovieDTO.swift in Sources */,
+				9F9B76B02A377444002D78CC /* DetailCreditsDTO.swift in Sources */,
 				9F3BD79C29F7F529009791B6 /* PopularMovieInteractor.swift in Sources */,
 				9F3F74A72A0249E500F136CC /* PopularSerieMapper.swift in Sources */,
 				9F3094A32A2F52DE00F645AE /* DetailViewController.swift in Sources */,
@@ -694,6 +737,7 @@
 				9F3F74A52A02486300F136CC /* PopularSerieBO.swift in Sources */,
 				9F3094A02A2F3E9300F645AE /* DetailPresenter.swift in Sources */,
 				9F3A5FA32A1F5A6A00926953 /* SearchDTO.swift in Sources */,
+				9F9B76B42A377AE8002D78CC /* DetailCreditsMapperBO.swift in Sources */,
 				9F113BCC29F6CA9F0017101D /* SceneDelegate.swift in Sources */,
 				9F3A5FA52A1F5B6400926953 /* SearchBO.swift in Sources */,
 				9FF70D042A2896A1002083CC /* DetailProtocols.swift in Sources */,
