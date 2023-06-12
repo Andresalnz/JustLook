@@ -25,6 +25,7 @@ final class Util {
         case popularSerie
         case searchAll
         case DetailMovie
+        case detailMovieCredits
         
         func shapeURL(page: Int? = nil, searchText: String? = nil, id: Int? = nil) -> URL? {
             let apiKey = Constants.apiKeyURL
@@ -47,6 +48,9 @@ final class Util {
                 case .DetailMovie:
                     guard let id = id else { return URL(string: "") }
                     return URL(string: "\(uri)\(Constants.movie)\(id)\(apiKey)")
+                case .detailMovieCredits:
+                    guard let id = id else { return URL(string: "") }
+                    return URL(string: "\(uri)\(Constants.movie)\(id)\(Constants.credits)")
             }
         }
     }

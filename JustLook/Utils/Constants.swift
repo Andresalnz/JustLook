@@ -23,4 +23,5 @@ struct Constants {
     static let query = "&query="
     static let languagePage: String = "&language=en-US&page="
     static let movie: String = "movie/"
+    static let credits: String = "credits"
 }
