@@ -5,7 +5,7 @@ Puedes revisar información del detalle de las peliculas y buscar cualquier peli
 
 | List Movies | Detail Movie |
 | ----------- | ------------ |
-| ![List Movies](Screenshots/ListMovies.png) | ![Detail Movie](Screenshots/DetailMovie.png) |
+| ![List Movies](Screenshot/ListMovies.png) | ![Detail Movie](Screenshot/DetailMovie.png) |
 
 ## Pre-Requisitos :memo:
 
