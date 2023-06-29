@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopularMovieViewController" customModule="JustLook" customModuleProvider="target">
             <connections>
-                <outlet property="btnAll" destination="28H-Dr-605" id="x7T-81-hcu"/>
                 <outlet property="btnMovies" destination="cIz-DM-x32" id="5tU-uQ-G4y"/>
                 <outlet property="btnSeries" destination="td0-s4-FYU" id="dUq-YC-ogt"/>
                 <outlet property="collectionPopularMovies" destination="mq1-8v-jka" id="Paq-u4-bQR"/>
@@ -35,16 +34,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvp-AB-lRg">
                     <rect key="frame" x="0.0" y="128" width="393" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28H-Dr-605">
-                            <rect key="frame" x="0.0" y="0.0" width="62" height="40"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Todo"/>
-                            <connections>
-                                <action selector="btnAllAction:" destination="-1" eventType="touchUpInside" id="wud-7N-tV9"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td0-s4-FYU">
-                            <rect key="frame" x="82" y="0.0" width="72" height="40"/>
+                            <rect key="frame" x="3" y="0.0" width="72" height="40"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Series"/>
                             <connections>
@@ -52,7 +43,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIz-DM-x32">
-                            <rect key="frame" x="174" y="0.0" width="91" height="40"/>
+                            <rect key="frame" x="95" y="0.0" width="91" height="40"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Peliculas"/>
                             <connections>
@@ -65,12 +56,9 @@
                         <constraint firstAttribute="bottom" secondItem="cIz-DM-x32" secondAttribute="bottom" id="Cuc-ds-b1f"/>
                         <constraint firstAttribute="height" constant="40" id="DmV-M4-rqD"/>
                         <constraint firstItem="cIz-DM-x32" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" id="JIV-nn-F8G"/>
-                        <constraint firstItem="28H-Dr-605" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" id="O9v-m5-yPd"/>
                         <constraint firstAttribute="bottom" secondItem="td0-s4-FYU" secondAttribute="bottom" id="PMG-Ni-qPR"/>
-                        <constraint firstItem="td0-s4-FYU" firstAttribute="leading" secondItem="28H-Dr-605" secondAttribute="trailing" constant="20" id="XtE-7d-XiT"/>
                         <constraint firstItem="td0-s4-FYU" firstAttribute="top" secondItem="Hvp-AB-lRg" secondAttribute="top" id="cyz-bF-LWS"/>
-                        <constraint firstItem="28H-Dr-605" firstAttribute="leading" secondItem="Hvp-AB-lRg" secondAttribute="leading" id="jIj-gw-uzH"/>
-                        <constraint firstAttribute="bottom" secondItem="28H-Dr-605" secondAttribute="bottom" id="tD8-sF-Y1t"/>
+                        <constraint firstItem="td0-s4-FYU" firstAttribute="leading" secondItem="Hvp-AB-lRg" secondAttribute="leading" constant="3" id="qqh-dK-EGJ"/>
                         <constraint firstItem="cIz-DM-x32" firstAttribute="leading" secondItem="td0-s4-FYU" secondAttribute="trailing" constant="20" id="uvv-oc-urW"/>
                     </constraints>
                 </view>
