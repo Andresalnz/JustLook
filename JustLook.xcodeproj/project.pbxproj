@@ -44,6 +44,7 @@
 		9F9B76B02A377444002D78CC /* DetailCreditsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B76AF2A377444002D78CC /* DetailCreditsDTO.swift */; };
 		9F9B76B22A3778FB002D78CC /* DetailCreditsBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B76B12A3778FB002D78CC /* DetailCreditsBO.swift */; };
 		9F9B76B42A377AE8002D78CC /* DetailCreditsMapperBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B76B32A377AE8002D78CC /* DetailCreditsMapperBO.swift */; };
+		9FB624B82A4DE5C90070CCAF /* privateConfig.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 9FB624B72A4DE5C90070CCAF /* privateConfig.xcconfig */; };
 		9FF4A78429FBE36A00966630 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78329FBE36A00966630 /* Constants.swift */; };
 		9FF4A78F29FC3C9E00966630 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF4A78E29FC3C9E00966630 /* Util.swift */; };
 		9FF70CF82A265B3F002083CC /* DetailMovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF70CF72A265B3F002083CC /* DetailMovieDTO.swift */; };
@@ -113,6 +114,7 @@
 		9F9B76AF2A377444002D78CC /* DetailCreditsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCreditsDTO.swift; sourceTree = "<group>"; };
 		9F9B76B12A3778FB002D78CC /* DetailCreditsBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCreditsBO.swift; sourceTree = "<group>"; };
 		9F9B76B32A377AE8002D78CC /* DetailCreditsMapperBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCreditsMapperBO.swift; sourceTree = "<group>"; };
+		9FB624B72A4DE5C90070CCAF /* privateConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = privateConfig.xcconfig; sourceTree = "<group>"; };
 		9FF4A78329FBE36A00966630 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9FF4A78E29FC3C9E00966630 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		9FF70CF72A265B3F002083CC /* DetailMovieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieDTO.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 		9FF4A78C29FC39F300966630 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				9FB624B72A4DE5C90070CCAF /* privateConfig.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				9F3BD7A329F84FE5009791B6 /* PopularMovieViewController.xib in Resources */,
 				9F9B76A72A3735B3002D78CC /* OpenSans-Medium.ttf in Resources */,
 				9F9B76AA2A3735B3002D78CC /* OpenSans-Regular.ttf in Resources */,
+				9FB624B82A4DE5C90070CCAF /* privateConfig.xcconfig in Resources */,
 				9F3094A42A2F52DE00F645AE /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
