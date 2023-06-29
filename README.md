@@ -3,27 +3,9 @@
 Aplicación que devuelve un listado de series y peliculas
 Puedes revisar información del detalle de las peliculas y buscar cualquier pelicula o serie
 
-<table>
-  <tr>
-    <th>List Movies</th>
-    <th>Detail Movie</th>
-  </tr>
-  <tr>
-    <td>![List Movies](Screenshots/ListMovies.png)</td>
-    <td>![Detail Movie](Screenshots/DetailMovie.png)</td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <th>List Series</th>
-    <th>![List Series](Screenshots/ListSeries.png)</th>
-  </tr>
-  <tr>
-    <td>List Search</td>
-    <td>![List Search](Screenshots/ListSearch.png)</td>
-  </tr>
-</table>
+| List Movies | Detail Movie |
+| ----------- | ------------ |
+| ![List Movies](Screenshots/ListMovies.png) | ![Detail Movie](Screenshots/DetailMovie.png) |
 
 ## Pre-Requisitos :memo:
 
