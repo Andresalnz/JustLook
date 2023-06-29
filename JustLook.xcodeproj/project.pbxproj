@@ -114,7 +114,6 @@
 		9F9B76B12A3778FB002D78CC /* DetailCreditsBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCreditsBO.swift; sourceTree = "<group>"; };
 		9F9B76B32A377AE8002D78CC /* DetailCreditsMapperBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCreditsMapperBO.swift; sourceTree = "<group>"; };
 		9FF4A78329FBE36A00966630 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		9FF4A78D29FC3A3200966630 /* privateConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = privateConfig.xcconfig; sourceTree = "<group>"; };
 		9FF4A78E29FC3C9E00966630 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		9FF70CF72A265B3F002083CC /* DetailMovieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieDTO.swift; sourceTree = "<group>"; };
 		9FF70CFA2A266569002083CC /* DetailMovieBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieBO.swift; sourceTree = "<group>"; };
@@ -465,7 +464,6 @@
 		9FF4A78C29FC39F300966630 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				9FF4A78D29FC3A3200966630 /* privateConfig.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -783,7 +781,6 @@
 /* Begin XCBuildConfiguration section */
 		9F113BF129F6CAA00017101D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FF4A78D29FC3A3200966630 /* privateConfig.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
