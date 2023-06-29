@@ -51,7 +51,6 @@ struct DetailPersonalMoviesBO: Codable {
     let popularity: Double?
     let profilePath: URL?
     let creditID: String?
-    let order: Int?
     let department: Department?
     let job: String?
     
@@ -63,7 +62,6 @@ struct DetailPersonalMoviesBO: Codable {
         case popularity
         case profilePath = "profile_path"
         case creditID = "credit_id"
-        case order
         case department
         case job
     }

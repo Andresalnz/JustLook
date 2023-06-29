@@ -8,7 +8,7 @@
 import Foundation
 
 extension DetailCreditsActMoviesDTO {
-    func toBo() -> DetailCreditsActMoviesBO {
+    func toBo() -> DetailCreditsActMoviesBO? {
        return DetailCreditsActMoviesBO(adult: adult,
                                 gender: gender,
                                 id: id,
@@ -25,7 +25,7 @@ extension DetailCreditsActMoviesDTO {
 }
 
 extension DetailPersonalMoviesDTO {
-    func toBo() -> DetailPersonalMoviesBO {
+    func toBo() -> DetailPersonalMoviesBO? {
         return DetailPersonalMoviesBO(adult: adult,
                                       gender: gender,
                                       id: id,
@@ -35,7 +35,6 @@ extension DetailPersonalMoviesDTO {
                                       popularity: popularity,
                                       profilePath: URL(string: profilePath ?? ""),
                                       creditID: creditID,
-                                      order: order,
                                       department: department,
                                       job: job)
     }

@@ -22,6 +22,8 @@ class DetailInteractor: DetailInteractorProtocol {
             
             if let detail = response.value {
                 completion(.success(detail))
+            } else {
+                print(response.error?.localizedDescription)
             }
         }
     }

@@ -28,11 +28,12 @@ protocol DetailRouting: AnyObject {
 //Protocolo presenter - Interactor
 protocol DetailPresenterInteractor : AnyObject {
     func loadDetail()
+    func loadDetailCredits()
 }
 
 //Protocolo Presenter - View
 protocol DetailUI: AnyObject {
-    func update(detailMovie: DetailMovieBO? )
+    func update(detailMovie: DetailMovieBO?, act: [DetailCreditsActMoviesBO]?, personal: [DetailPersonalMoviesBO]? )
 }
 
 protocol DetailUIPresenter: AnyObject {

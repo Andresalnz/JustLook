@@ -50,7 +50,8 @@ final class Util {
                     return URL(string: "\(uri)\(Constants.movie)\(id)\(apiKey)")
                 case .detailMovieCredits:
                     guard let id = id else { return URL(string: "") }
-                    return URL(string: "\(uri)\(Constants.movie)\(id)\(Constants.credits)")
+                   print("\(uri)\(Constants.movie)\(id)\(Constants.credits)\(apiKey)")
+                    return URL(string: "\(uri)\(Constants.movie)\(id)\(Constants.credits)\(apiKey)")
             }
         }
     }
