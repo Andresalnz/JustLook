@@ -7,6 +7,10 @@ Puedes revisar información del detalle de las peliculas y buscar cualquier peli
 | ----------- | ------------ |
 | ![List Movies](Screenshot/ListMovies.png) | ![Detail Movie](Screenshot/DetailMovie.png) |
 
+| List Series | List Search |
+| ----------- | ------------ |
+| ![List Movies](Screenshot/ListSeries.png) | ![Detail Movie](Screenshot/ListSearch.png) |
+
 ## Pre-Requisitos :memo:
 
 Añade un archivo xcconfig dentro de la carpeta SupportingFiles y coloca tu apikey --> `API_KEY = TU API KEY`
