@@ -24,7 +24,7 @@ class PopularMovieViewController: UIViewController {
     //MARK: - Variables
     var presenter: PopularMoviePresenter?
     var time: Timer?
-    var filter: Bool = false
+    
     
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
@@ -130,7 +130,7 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         if btnMovie || btnAll {
             guard let items =  presenter?.movies.count else { return 0 }
             guard let items1 =  presenter?.searchAll.count else { return 0 }
-            return filter ? items1 : items
+            return  presenter!.filter ? items1 : items
         } else if btnSerie {
             guard let items = presenter?.series.count else { return 0 }
             return items
@@ -156,7 +156,7 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
         let btnSerie = self.btnSeries.isSelected
         let btnAll = self.btnAll.isSelected
         
-        if filter == true && (presenter?.searchAll.count)! > 0 {
+        if  presenter?.filter == true && (presenter?.searchAll.count)! > 0 {
             if let item = presenter?.searchAll[indexPath.row] {
                 cell.paintCellSearch(item: item)
             }
@@ -185,11 +185,7 @@ extension PopularMovieViewController: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 3
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 3
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -207,7 +203,7 @@ extension PopularMovieViewController: UISearchBarDelegate {
         time?.invalidate()
         if searchText.count == 3 && presenter?.searchAll.count == 0 {
             presenter?.page = 1
-            filter = true
+            presenter?.filter = true
             presenter?.loadSearchMovies(searchText: searchText)
         } else if searchText.count > 3 {
             time = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { [self] _ in
@@ -216,14 +212,14 @@ extension PopularMovieViewController: UISearchBarDelegate {
             })
         } else if searchText == "" {
             presenter?.page = 1
-            filter = false
+            presenter?.filter = false
             self.presenter?.searchAll.removeAll()
             presenter?.loadPopularMovies()
         }
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        filter = false
+        presenter?.filter = false
         searchBar.text = ""
         collectionPopularMovies.reloadData()
     }

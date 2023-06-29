@@ -17,7 +17,7 @@ final class PopularMoviePresenter {
     var series: [ResultSerieBO] = []
     var searchAll: [ResultSearchBO] = []
     var page: Int = 1
-    
+    var filter: Bool = false
     //MARK: - Init
     init(popularMovieInteractor: PopularMovieInteractor, router: PopularRouting) {
         self.popularMovieInteractor = popularMovieInteractor
@@ -32,8 +32,14 @@ extension PopularMoviePresenter: PopularMoviewUIPresenter {
     }
     
     func onTapCell(atIndex: Int) {
-        guard let id = movies[atIndex].id else { return }
-        router.showDetailM(id: id)
+        if filter {
+            guard let id = searchAll[atIndex].id else { return }
+            router.showDetailM(id: id)
+        } else {
+            guard let id = movies[atIndex].id else { return }
+            router.showDetailM(id: id)
+        }
+        
     }
 }
 
