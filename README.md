@@ -6,10 +6,10 @@ Puedes revisar información del detalle de las peliculas y buscar cualquier peli
 <table>
   <tr>
     <th>List Movies</th>
-    <th>![List Movies](Screenshots/ListMovies.png)</th>
+    <th>Detail Movie</th>
   </tr>
   <tr>
-    <td>Detail Movie</td>
+    <td>![List Movies](Screenshots/ListMovies.png)</td>
     <td>![Detail Movie](Screenshots/DetailMovie.png)</td>
   </tr>
 </table>
@@ -25,9 +25,9 @@ Puedes revisar información del detalle de las peliculas y buscar cualquier peli
   </tr>
 </table>
 
-## Pre-Requisitos :memo: :pencil:
+## Pre-Requisitos :memo:
 
-`Añade un archivo xcconfig dentro de la carpeta SupportingFiles y coloca tu apikey --> API_KEY = TU API KEY`
+Añade un archivo xcconfig dentro de la carpeta SupportingFiles y coloca tu apikey --> `API_KEY = TU API KEY`
 
 ## Arquitectura
 
@@ -46,15 +46,15 @@ Para esta aplicación he usado la arquitectura Viper, que consta de:
 ## Stack Tecnologico
 
 - Xcode 14.3.1
-- [Alamofire 5.6.4](https://github.com/Alamofire/Alamofire
+- [Alamofire 5.6.4](https://github.com/Alamofire/Alamofire)
 - [KingFisher 7.6.4](https://github.com/onevcat/Kingfisher)
 - Swift y UiKit
 
-## Estado del proyecto
+## Estado del proyecto
 
 Abierto a mejoras
 
 
-## Author
+## Autor
 
 **Andres Aleu :v:**
