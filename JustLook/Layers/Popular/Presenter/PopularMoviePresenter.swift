@@ -31,10 +31,13 @@ extension PopularMoviePresenter: PopularMoviewUIPresenter {
         loadPopularMovies()
     }
     
-    func onTapCell(atIndex: Int) {
+    func onTapCell(atIndex: Int, serie: Bool) {
         if filter {
             guard let id = searchAll[atIndex].id else { return }
             router.showDetailM(id: id)
+        } else if serie {
+            guard let id = series[atIndex].id else { return }
+            print("No hay detalle")
         } else {
             guard let id = movies[atIndex].id else { return }
             router.showDetailM(id: id)

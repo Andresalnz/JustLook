@@ -15,7 +15,7 @@ protocol PopularMovieUI: AnyObject {
 //Protocolo para conectar Vista con Presenter
 protocol PopularMoviewUIPresenter: AnyObject {
     func viewDidLoad()
-    func onTapCell(atIndex: Int)
+    func onTapCell(atIndex: Int, serie: Bool)
 }
 
 //Protocolo para conectar Presenter con Interactor
